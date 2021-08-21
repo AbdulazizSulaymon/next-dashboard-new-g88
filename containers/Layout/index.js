@@ -11,12 +11,13 @@ const Layout = ({ children }) => {
             <div className="sidebar myshadow show">
                 <div className="d-flex align-items-center">
                     <img src="https://demos.creative-tim.com/soft-ui-dashboard/assets/img/logo-ct.png"
-                        className="logo me-3" alt="" />
-                    <p className="m-0 fw-bold">Soft UI Dashboard</p>
+                        className="logo me-2" alt="" />
+                    <p className="m-0 soft">Soft UI Dashboard</p>
                 </div>
+                <hr className="horizontal dark mt-4" />
                 <div className="line"></div>
                 <ul className="mt-4">
-                    {dashboardPages.map(v => <li key={v.href} className="mb-2">
+                    {dashboardPages.map(v => <li key={v.href} className="mb-4">
                         <Link href={v.href}>
                             <a className="item d-flex align-items-center">
                                 <div className="icon rounded shadow">
@@ -29,6 +30,7 @@ const Layout = ({ children }) => {
                         </Link>
                     </li>)}
                 </ul>
+                <p class="text-uppercase account">Account pages</p>
             </div>
             <div className="rightside ">
                 <header className="myshadow">
