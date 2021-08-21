@@ -10,7 +10,7 @@ export const dashboardPages = [
     {
         icon: <FontAwesomeIcon icon={faHome} />,
         title: "Tables",
-        href: "/tables"
+        href: "/table"
     },
     {
         icon: <FontAwesomeIcon icon={faHome} />,

@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
                 </ul>
             </div>
             <div className="rightside ">
-                <header className="myshadow">
+                <header>
                     <FontAwesomeIcon icon={faBars} />
                 </header>
                 <div className="content">
