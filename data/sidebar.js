@@ -11,7 +11,7 @@ export const dashboardPages = [
     {
         icon: <FontAwesomeIcon className="icons" icon={faBuilding} />,
         title: "Tables",
-        href: "/tables"
+        href: "/table"
     },
     {
         icon: <FontAwesomeIcon className="icons" icon={faCreditCard} />,

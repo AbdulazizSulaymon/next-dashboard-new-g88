@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
                 <p class="text-uppercase account">Account pages</p>
             </div>
             <div className="rightside ">
-                <header className="myshadow">
+                <header>
                     <FontAwesomeIcon icon={faBars} />
                 </header>
                 <div className="content">
