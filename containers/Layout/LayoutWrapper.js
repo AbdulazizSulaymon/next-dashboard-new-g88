@@ -52,10 +52,11 @@ const LayoutWrapper = styled.div`
 
       header{
         padding: ${padding};
-        background-color: white;
         border-radius: 10px;
         position: sticky;
         top: 0;
+        background-color: #F8F9FA;
+        z-index: 1000;
       }
       .content{
         margin-top: 10px;
