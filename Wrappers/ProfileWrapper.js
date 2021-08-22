@@ -4,8 +4,23 @@ const color = "rgb(52, 71, 103)";
 const iconColor = "rgb(60, 80, 110)";
 
 const ProfileWrapper = styled.div`
+  .btn-link {
+    text-decoration: none;
+    color: #cb0c9f;
+    font-weight: 700;
+    box-shadow: none;
+  }
+  .avatar {
+    height: 48px;
+    width: 48px;
+    border-radius: .75rem;
+  }
   .color {
     color: ${color};
+  }
+
+  .text-body {
+    color: ${color} !important;
   }
 
   .page-header {
@@ -37,10 +52,10 @@ const ProfileWrapper = styled.div`
   }
 
   .card {
-    min-width: 440px;
+    color: ${color};
     box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
     position: relative;
-    margin-top: -5%;
+    margin-top: -50px;
     border: 0 solid rgba(0, 0, 0, 0.125);
     border-radius: 1rem;
     -webkit-backdrop-filter: saturate(200%) blur(30px);
@@ -93,9 +108,36 @@ const ProfileWrapper = styled.div`
     font-family: "Open Sans" sans-serif;
     padding: 1.5rem;
 
+    li,
+    .form-check-label {
+      color: ${color};
+    }
+
+    .text-sm {
+      font-size: 0.875rem !important;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+
+    hr.horizontal.gray-light {
+      background-image: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0, 0, 0, 0.1),
+        transparent
+      );
+    }
+    hr.horizontal {
+      background-color: transparent;
+    }
+
+    .form-check-input {
+      box-shadow: none;
+    }
     .form-check-input:checked {
-      background-color: rgba(58,65,111,.95);
-      border-color: rgba(58,65,111,.95);
+      background-color: rgba(58, 65, 111, 0.95);
+      border-color: rgba(58, 65, 111, 0.95);
+      box-shadow: none;
     }
 
     .font-weight-bolder {
