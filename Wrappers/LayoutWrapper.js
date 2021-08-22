@@ -81,33 +81,13 @@ const LayoutWrapper = styled.div`
   }
   .rightside {
     flex: 1;
-
-<<<<<<< HEAD
-      header{
-        padding: ${padding};
-        border-radius: 10px;
-        position: sticky;
-        top: 0;
-        background-color: #F8F9FA;
-        z-index: 1000;
-      }
-      .content{
-        margin-top: 10px;
-        padding: ${padding};
-      }
-=======
     header {
       padding: ${padding};
-      background-color: white;
       border-radius: 10px;
       position: sticky;
       top: 0;
+      background: transparent;
     }
-    .content {
-      margin-top: 10px;
-      padding: ${padding};
-    }
->>>>>>> 942035a86f7bc531b67595084a891cc0dc72e72c
   }
 `;
 
