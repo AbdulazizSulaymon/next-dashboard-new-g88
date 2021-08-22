@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { accountPages, dashboardPages } from "../../data/sidebar";
 import LayoutWrapper from "../../Wrappers/LayoutWrapper";
 import Link from "next/link";
+=======
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react'
+import { dashboardPages } from '../../data/sidebar'
+import LayoutWrapper from './LayoutWrapper'
+import Link from "next/link"
+>>>>>>> bd7573c963e86661e40a864c1f99afd6fc662b95
 
 const Layout = ({ children }) => {
   return (
