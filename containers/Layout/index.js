@@ -1,7 +1,7 @@
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
-import { dashboardPages } from '../../data/sidebar'
+import { accountPages, dashboardPages } from '../../data/sidebar'
 import LayoutWrapper from './LayoutWrapper'
 import Link from "next/link"
 
@@ -31,6 +31,20 @@ const Layout = ({ children }) => {
                     </li>)}
                 </ul>
                 <p class="text-uppercase account">Account pages</p>
+                <ul className="mt-4">
+                    {accountPages.map(v => <li key={v.href} className="mb-4">
+                        <Link href={v.href}>
+                            <a className="item d-flex align-items-center">
+                                <div className="icon rounded shadow">
+                                    {v.icon}
+                                </div>
+                                <p className="ms-3 mb-0">
+                                    {v.title}
+                                </p>
+                            </a>
+                        </Link>
+                    </li>)}
+                </ul>
             </div>
             <div className="rightside ">
                 <header>
