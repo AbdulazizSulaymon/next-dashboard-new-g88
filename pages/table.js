@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import Layout from "../containers/Layout";
 import Link from "next/link";
@@ -83,8 +82,6 @@ const table = () => {
     </Layout>
   );
 };
-=======
-import React, { useEffect } from 'react'
 import Layout from '../containers/Layout';
 import Link from "next/link";
 import TableWrapper from '../Wrappers/TabbleWrapper';
@@ -95,14 +92,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faEllipsisV} from "@fortawesome/free-solid-svg-icons";
 
 const table = () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
         setTable();
         setTable2();
     }, []);
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const data = useSelector(state => state.TableReducer.tableData);
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const data2 = useSelector(state => state.TableReducer.tableData2);
     console.log(data2);
     return (
@@ -207,6 +201,5 @@ const table = () => {
         </Layout>
     )
 }
->>>>>>> bd7573c963e86661e40a864c1f99afd6fc662b95
 
 export default table;
