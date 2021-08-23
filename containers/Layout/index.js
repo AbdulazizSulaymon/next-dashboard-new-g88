@@ -1,9 +1,9 @@
 import React from "react";
-import { dashboardPages, AccoundPages } from "../../data/sidebar";
 import Link from "next/link";
 import { Button } from "@material-ui/core";
+import { dashboardPages, AccoundPages } from "../../data/sidebar";
 import LayoutWrapper from "./../../Wrappers/LayoutWrapper";
-import { AccessAlarm , PersonIcon} from "@material-ui/icons";
+import { AccessAlarm , PersonIcon } from "@material-ui/icons";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import SettingsIcon from "@material-ui/icons/Settings";
 import { useRouter } from "next/dist/client/router";
@@ -73,7 +73,7 @@ const Layout = ({ children }) => {
           <Button className="btn-gradient text-white">Upgrade to pro</Button>
         </div>
       </div>
-      <div className="rightside">
+      <div className="rightside ">
         <header className="">
           <div className="d-flex justify-content-between align-items-center">
             <div>
