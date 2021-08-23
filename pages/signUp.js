@@ -4,7 +4,7 @@ const SignUp = () => {
     return (
         <SignUpWrapper>
             <div className="container">
-            <h1>Sign up</h1>
+                <h1>Sign up</h1>
             </div>
         </SignUpWrapper>
     )
