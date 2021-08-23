@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
@@ -47,14 +48,21 @@ const Layout = ({ children }) => {
 }
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+=======
+>>>>>>> ecb6e5dcc19341bb392279a9f3b08731f2dee505
 import React from "react";
 import { dashboardPages, AccoundPages } from "../../data/sidebar";
 import Link from "next/link";
-import PersonIcon from "@material-ui/icons/Person";
 import { Button } from "@material-ui/core";
 import LayoutWrapper from "./../../Wrappers/LayoutWrapper";
+import { AccessAlarm } from "@material-ui/icons";
+import PersonIcon from "@material-ui/icons/Person";
+import NotificationsIcon from "@material-ui/icons/Notifications";
+import SettingsIcon from "@material-ui/icons/Settings";
+import { useRouter } from "next/dist/client/router";
 
 const Layout = ({ children }) => {
+  const router = useRouter();
   return (
     <LayoutWrapper>
       <div className="sidebar show myshadow me-2">
@@ -71,7 +79,12 @@ const Layout = ({ children }) => {
         <hr />
         <ul className="my-4">
           {dashboardPages.map((v) => (
-            <li className={`mb-3 ms-2 ${v.active}`} key={v.href}>
+            <li
+              className={`mb-3 ms-2 ${
+                router.pathname === v.href ? "active" : ""
+              }`}
+              key={v.href}
+            >
               <Link href={v.href}>
                 <a className="item d-flex align-items-center">
                   <div className="icon rounded shadow">{v.icon}</div>
@@ -113,7 +126,34 @@ const Layout = ({ children }) => {
           <Button className="btn-gradient text-white">Upgrade to pro</Button>
         </div>
       </div>
-      <div className="rightside ">
+      <div className="rightside">
+        <header className="">
+          <div className="d-flex justify-content-between align-items-center">
+            <div>
+              <div className="d-flex align-items-center">
+                <Link href="/">
+                  <a className="text-secondary">Pages</a>
+                </Link>
+                <p className="mb-0 ms-2">/ Dashboard</p>
+              </div>
+              <p className="fw-bold">Dashboard</p>
+            </div>
+            <div className="d-flex align-items-center">
+              <div className="d-flex align-items-center input-group">
+                <span className="input-group-text">
+                  <AccessAlarm />
+                </span>
+                <input className="input" placeholder="Type here..."></input>
+              </div>
+              <div className="d-flex align-items-center mx-3">
+                <PersonIcon />
+                <p className="mb-0 fw-bold">SignIn</p>
+              </div>
+              <NotificationsIcon className="me-2" />
+              <SettingsIcon className="" />
+            </div>
+          </div>
+        </header>
         <div className="content">{children}</div>
       </div>
     </LayoutWrapper>

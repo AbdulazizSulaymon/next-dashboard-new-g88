@@ -105,7 +105,7 @@ const LayoutWrapper = styled.div`
       }
     }
   }
-  .rightSide {
+  .rightside {
     flex: 1;
 <<<<<<< HEAD:containers/Layout/LayoutWrapper.js
       header{
