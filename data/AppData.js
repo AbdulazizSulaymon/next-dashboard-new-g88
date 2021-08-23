@@ -20,25 +20,37 @@ export const AppData = [
 
 export const Check = [
     {
-        title: "Email me when someone follows me",
+        name: "check1",
+        title: "Email me when someone",
+        checked: true,
     },
     {
-        title: "Email me when someone answers on my post",
+        name: "check2",
+        title: "Email me when someone answers",
+        checked: false,
     },
     {
-        title: "Email me when someone mentions me",
+        name: "check3",
+        title: "Email me when someone",
+        checked: true,
     }
 ]
 
 export const Application = [
     {
+        name: "Application1",
         title: "New launches and projects",
+        checkeds: false,
     },
     {
+        name: "Application2",
         title: "Monthly product updates",
+        checkeds: true,
     },
     {
+        name: "Application3",
         title: "Subscribe to newsletter",
+        checkeds: false,
     }
 ]
 
