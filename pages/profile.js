@@ -6,6 +6,7 @@ import {
 import { faHeart, faUserEdit } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import Layout from "../containers/Layout";
 import {
   AppData,
@@ -23,7 +24,16 @@ const Profile = () => {
 =======
 >>>>>>> 5c053b6a9463293c2f8e8b51e69c643f63a180be
   const router = useRouter();
-  console.log(router);
+
+  const [checks, setChecks] = useState({ check1: true, check2: true, check3: true })
+
+  useEffect(() => {
+    let obj = {};
+    Check.map(v => obj[v.name] = v.checked);
+
+    setChecks(obj);
+  }, [])
+
 
   return (
     <Layout>
@@ -96,6 +106,8 @@ const Profile = () => {
                           <input
                             className="form-check-input ms-auto"
                             type="checkbox"
+                            checked={checks[v.name]}
+                            onChange={(e) => setChecks({ ...checks, [v.name]: e.target.checked })}
                           />
                           <label
                             htmlFor="flexSwitchDefault"
