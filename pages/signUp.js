@@ -1,8 +1,14 @@
 import React from "react";
-import signUpWrapper from "../Wrappers/signUpWrapper";
+import SignUpWrapper from "../Wrappers/SignUpWrapper";
 
-const signUp = () => {
-  return <signUpWrapper></signUpWrapper>;
+const SignUp = () => {
+  return (
+    <SignUpWrapper>
+      <div className="container">
+        <h1>Sign up</h1>
+      </div>
+    </SignUpWrapper>
+  );
 };
 
-export default signUp;
+export default SignUp;
