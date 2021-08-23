@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+<<<<<<< HEAD
+const SignUpWrapper = styled.div``;
+=======
 const SignUpWrapper = styled.div`
 
     .big-container {
@@ -33,5 +36,6 @@ const SignUpWrapper = styled.div`
         }
     }
 `;
+>>>>>>> 61871c852b345aaeb34c2dd775db1699c77329bf
 
 export default SignUpWrapper;
