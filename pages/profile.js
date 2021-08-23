@@ -5,7 +5,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faHeart, faUserEdit } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useRouter } from "next/dist/client/router";
+import { useRouter } from "next/router";
 import Layout from "../containers/Layout";
 import {
   AppData,
@@ -24,7 +24,7 @@ const profile = () => {
       <ProfileWrapper>
         <div className="container-fluid position-relative">
           <div className="page-header">
-            <span class="mask bg-gradient-primary opacity-6"></span>
+            <span className="mask bg-gradient-primary opacity-6"></span>
           </div>
           <div className="card card-body blur shadow-blur mx-4 mt-n6 overflow-hidden">
             <div className="row gx-4">
@@ -40,7 +40,7 @@ const profile = () => {
               <div className="col-auto my-auto">
                 <div className="h-100">
                   <h5 className="mb-1 User">Alec Thompson</h5>
-                  <p class="mb-0 font-weight-bold text-sm user">
+                  <p className="mb-0 font-weight-bold text-sm user">
                     CEO / Co-Founder
                   </p>
                 </div>
@@ -86,7 +86,7 @@ const profile = () => {
                   </h6>
                   <ul className="d-flex list-group">
                     {Check.map((v) => (
-                      <li className="list-group-item border-0 px-0 p-0">
+                      <li key="" className="list-group-item border-0 px-0 p-0">
                         <div className="form-check form-switch ps-0">
                           <input
                             className="form-check-input ms-auto"
@@ -110,7 +110,7 @@ const profile = () => {
                       <li className="list-group-item border-0 px-0">
                         <div className="form-check form-switch ps-0">
                           <input
-                            class="form-check-input ms-auto"
+                            className="form-check-input ms-auto"
                             type="checkbox"
                           />
                           <label className="form-check-label text-body ms-3 text-truncate w-80 mb-0">
