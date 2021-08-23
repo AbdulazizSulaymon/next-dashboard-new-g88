@@ -7,8 +7,10 @@ import { AccessAlarm } from "@material-ui/icons";
 import PersonIcon from "@material-ui/icons/Person";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import SettingsIcon from "@material-ui/icons/Settings";
+import { useRouter } from "next/dist/client/router";
 
 const Layout = ({ children }) => {
+  const router = useRouter();
   return (
     <LayoutWrapper>
       <div className="sidebar show myshadow me-2">
@@ -25,7 +27,12 @@ const Layout = ({ children }) => {
         <hr />
         <ul className="my-4">
           {dashboardPages.map((v) => (
-            <li className={`mb-3 ms-2 ${v.active}`} key={v.href}>
+            <li
+              className={`mb-3 ms-2 ${
+                router.pathname === v.href ? "active" : ""
+              }`}
+              key={v.href}
+            >
               <Link href={v.href}>
                 <a className="item d-flex align-items-center">
                   <div className="icon rounded shadow">{v.icon}</div>
