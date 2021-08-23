@@ -1,11 +1,6 @@
 import Layout from "../containers/Layout";
 import React from "react";
-import Link from "next/link";
-import { AccessAlarm } from "@material-ui/icons";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
-import PersonIcon from "@material-ui/icons/Person";
-import NotificationsIcon from "@material-ui/icons/Notifications";
-import SettingsIcon from "@material-ui/icons/Settings";
 import { Button } from "@material-ui/core";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import Menu from "@material-ui/core/Menu";
