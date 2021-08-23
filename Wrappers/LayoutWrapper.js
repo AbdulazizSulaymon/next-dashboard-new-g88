@@ -107,6 +107,21 @@ const LayoutWrapper = styled.div`
   }
   .rightside {
     flex: 1;
+<<<<<<< HEAD:containers/Layout/LayoutWrapper.js
+      header{
+        padding: ${padding};
+        border-radius: 10px;
+        position: sticky;
+        top: 0;
+        background-color: #F8F9FA;
+        z-index: 1000;
+      }
+      .content{
+        margin-top: 10px;
+        padding: ${padding};
+      }
+=======
+>>>>>>> 2c06ac1cfceb9b30e3e26c3292fb4935f05f3159:Wrappers/LayoutWrapper.js
     header {
       padding: ${padding};
       border-radius: 10px;
@@ -335,6 +350,13 @@ const LayoutWrapper = styled.div`
         }
       }
     }
+<<<<<<< HEAD:containers/Layout/LayoutWrapper.js
+    .content {
+      margin-top: 10px;
+      padding: ${padding};
+    }
+=======
+>>>>>>> 2c06ac1cfceb9b30e3e26c3292fb4935f05f3159:Wrappers/LayoutWrapper.js
   }
 `;
 export default LayoutWrapper;
