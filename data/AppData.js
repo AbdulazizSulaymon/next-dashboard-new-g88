@@ -1,6 +1,4 @@
-import { faFacebook, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faCopy, faDiceD6, faTools } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const AppData = [
     {
@@ -93,5 +91,26 @@ export const Conversations = [
         name: "Nick Daniel",
         title: "Hi! I need more information..",
         reply: "Reply",
+    },
+]
+
+export const Footer = [
+    {
+        title: "Creative Tim",
+    },
+    {
+        title: "About Us",
+    },
+    {
+        title: "Blog",
+    },
+    {
+        title: "License",
+    },
+]
+
+export const Projects = [
+    {
+
     },
 ]

@@ -3,11 +3,18 @@ import {
   faInstagram,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { faUserEdit } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faUserEdit } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/dist/client/router";
 import Layout from "../containers/Layout";
-import { AppData, Application, Check, Conversations, Information } from "../data/AppData";
+import {
+  AppData,
+  Application,
+  Check,
+  Conversations,
+  Footer,
+  Information,
+} from "../data/AppData";
 import ProfileWrapper from "../Wrappers/ProfileWrapper";
 
 const profile = () => {
@@ -159,25 +166,98 @@ const profile = () => {
                 </div>
               </div>
               <div className="card-body p-3">
-                  <ul className="list-group">
-                      {Conversations.map ((v) => (
-                          <li className="list-group-item border-0 d-flex align-items-center px-0 mb-2">
-                              <div className="me-3">
-                                  <img src={v.img} alt="kal" className="border-radius-lg shadow avatar" />
-                              </div>
-                              <div className="d-flex align-items-start flex-column justify-content-center">
-                                  <h6 className="mb-0 text-sm">{v.name}</h6>
-                                  <p className="mb-0 text-xs">{v.title}</p>
-                              </div>
-                              <a className="btn btn-link pe-3 ps-0 mb-0 ms-auto text-uppercase" href="#">{v.reply}</a>
-                          </li>
-                      ))}
-                  </ul>
+                <ul className="list-group">
+                  {Conversations.map((v) => (
+                    <li className="list-group-item border-0 d-flex align-items-center px-0 mb-2">
+                      <div className="me-3">
+                        <img
+                          src={v.img}
+                          alt="kal"
+                          className="border-radius-lg shadow avatar"
+                        />
+                      </div>
+                      <div className="d-flex align-items-start flex-column justify-content-center">
+                        <h6 className="mb-0 text-sm">{v.name}</h6>
+                        <p className="mb-0 text-xs">{v.title}</p>
+                      </div>
+                      <a
+                        className="btn btn-link pe-3 ps-0 mb-0 ms-auto text-uppercase"
+                        href="#"
+                      >
+                        {v.reply}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
-            <div className="col-12 mt-4"></div>
+            <div className="col-12 mt-4">
+              <div className="card mb-4 d-flex">
+                <div className="card-header pb-0 p-3">
+                  <h6 className="color mb-1">Projects</h6>
+                  <p className="text-sm">Architects design houses</p>
+                </div>
+                <div className="card-body p-3">
+                  <div className="row">
+                    <div className="col-xl-3 col-md-6 mb-xl-0 mb-4">
+                      <div className="card card-blog card-plain">
+                        <div className="position-relative">
+                          <a className="d-block shadow-xl border-radius-xl">
+                            <img
+                              src="https://demos.creative-tim.com/soft-ui-dashboard/assets/img/home-decor-1.jpg"
+                              className="img-fluid shadow border-radius-xl"
+                            />
+                          </a>
+                        </div>
+                        <div className="card-body px-1 pb-0">
+                          <p>Project #1</p>
+                          <a href="#">
+                            <h5>Modern</h5>
+                          </a>
+                          <p className="mb-4 text-sm">
+                            As Uber works through a huge amount of internal
+                            management turmoil.
+                          </p>
+                          <div className="d-flex align-items-center justify-content-between">
+                            <button type="button" className="btn btn-outline-primary btn-sm mb-0">View Project</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="footer pt-3"></div>
+          <footer className="footer pt-3">
+            <div className="container-fluid">
+              <div className="row align-items-center justify-content-lg-between">
+                <div className="col-lg-6 mb-lg-0 mb-4">
+                  <div className="copyright text-center text-sm text-muted text-lg-start">
+                    <p className="color">
+                      © 2021, made with <FontAwesomeIcon icon={faHeart} /> by{" "}
+                      <span>Creative Tim</span> for a better web.
+                    </p>
+                  </div>
+                </div>
+                <div className="col-lg-6">
+                  <ul className="nav nav-footer justify-content-center justify-content-lg-end">
+                    {Footer.map((v) => (
+                      <li className="nav-item">
+                        <a
+                          className="nav-link color"
+                          target="_blank"
+                          href="https://www.creative-tim.com/license"
+                        >
+                          {v.title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </footer>
         </div>
       </ProfileWrapper>
     </Layout>

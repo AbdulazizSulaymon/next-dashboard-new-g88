@@ -103,6 +103,10 @@ const ProfileWrapper = styled.div`
   .card .card-header {
     background: none;
     border: none;
+    .text-sm {
+      font-size: .875rem!important;
+      color: ${iconColor};
+    }
   }
   .card .card-body {
     font-family: "Open Sans" sans-serif;
