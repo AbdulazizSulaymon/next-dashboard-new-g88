@@ -19,10 +19,6 @@ import {
 import ProfileWrapper from "../Wrappers/ProfileWrapper";
 
 const Profile = () => {
-<<<<<<< HEAD
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-=======
->>>>>>> 5c053b6a9463293c2f8e8b51e69c643f63a180be
   const router = useRouter();
 
   const [checks, setChecks] = useState({ check1: true, check2: true, check3: true })
