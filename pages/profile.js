@@ -3,7 +3,7 @@ import {
   faInstagram,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { faHeart, faUserEdit } from "@fortawesome/free-solid-svg-icons";
+import { faUserEdit } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -13,7 +13,6 @@ import {
   Application,
   Check,
   Conversations,
-  Footer,
   Information,
 } from "../data/AppData";
 import ProfileWrapper from "../Wrappers/ProfileWrapper";
@@ -40,7 +39,7 @@ const Profile = () => {
     let apps = {};
     Application.map((v) => (apps[v.name] = v.checkeds));
 
-    setApplications(apps)
+    setApplications(apps);
   }, []);
 
   return (
@@ -78,8 +77,9 @@ const Profile = () => {
                     {AppData.map((v, i) => (
                       <li className="nav-item" key={v.title}>
                         <a
-                          className={`nav-link mb-0 px-0 py-1${router.pathname === v.active ? "active_link" : ""
-                            }`}
+                          className={`nav-link mb-0 px-0 py-1${
+                            router.pathname === v.active ? "active_link" : ""
+                          }`}
                           data-bs-toggle="tab"
                           aria-selected="false"
                           role="tab"
@@ -277,36 +277,6 @@ const Profile = () => {
               </div>
             </div>
           </div>
-          <footer className="footer pt-3">
-            <div className="container-fluid">
-              <div className="row align-items-center justify-content-lg-between">
-                <div className="col-lg-6 mb-lg-0 mb-4">
-                  <div className="copyright text-center text-sm text-muted text-lg-start">
-                    <p className="color">
-                      © 2021, made with <FontAwesomeIcon icon={faHeart} /> by{" "}
-                      <span>Creative Tim</span> for a better web.
-                    </p>
-                  </div>
-                </div>
-                <div className="col-lg-6">
-                  <ul className="nav nav-footer justify-content-center justify-content-lg-end">
-                    {Footer.map((v, i) => (
-                      <li key={i} className="nav-item">
-                        <a
-                          className="nav-link color"
-                          target="_blank"
-                          rel="noreferrer"
-                          href="https://www.creative-tim.com/license"
-                        >
-                          {v.title}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </footer>
         </div>
       </ProfileWrapper>
     </Layout>

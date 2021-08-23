@@ -4,9 +4,11 @@ import { Button } from "@material-ui/core";
 import { dashboardPages, AccoundPages } from "../../data/sidebar";
 import LayoutWrapper from "./../../Wrappers/LayoutWrapper";
 import NotificationsIcon from "@material-ui/icons/Notifications";
+import PersonIcon from "@material-ui/icons/Person";
 import SettingsIcon from "@material-ui/icons/Settings";
 import { useRouter } from "next/dist/client/router";
 import { AccessAlarm } from "@material-ui/icons";
+import FavoriteIcon from "@material-ui/icons/Favorite";
 
 const Layout = ({ children }) => {
   const router = useRouter();
@@ -102,6 +104,35 @@ const Layout = ({ children }) => {
           </div>
         </header>
         <div className="content">{children}</div>
+        <footer className="footer">
+          <div className="d-flex justify-content-between align-items-center">
+            <div>
+              <p className="mb-0 ms-5 text_footer">
+                © 2021, made with <FavoriteIcon /> by{" "}
+                <a href="#" className="fw-bold">
+                  Creative Tim
+                </a>{" "}
+                for a better web.
+              </p>
+            </div>
+            <div>
+              <ul className="d-flex align-items-center my-4">
+                <li className="px-3 text_footer">
+                  <a href="#">Creative Tim</a>
+                </li>
+                <li className="px-3 text_footer">
+                  <a href="#">About Us</a>
+                </li>
+                <li className="px-3 text_footer">
+                  <a href="#">Blog</a>
+                </li>
+                <li className="px-3 text_footer me-3">
+                  <a href="#">Licens</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
       </div>
     </LayoutWrapper>
   );

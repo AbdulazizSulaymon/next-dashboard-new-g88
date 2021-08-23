@@ -111,19 +111,7 @@ const LayoutWrapper = styled.div`
   .rightside {
     flex: 1;
     header {
-      padding: ${padding};
-      border-radius: 10px;
-      position: sticky;
-      top: 0;
-      background-color: #f8f9fa;
-      z-index: 1000;
-    }
-    .content {
-      margin-top: 10px;
-      padding: ${padding};
-    }
-    header {
-      padding: ${padding};
+      padding: 5px 10px 5px;
       border-radius: 10px;
       position: sticky;
       top: 0;
@@ -353,6 +341,18 @@ const LayoutWrapper = styled.div`
     .content {
       margin-top: 10px;
       padding: ${padding};
+    }
+  }
+  .footer {
+    .text_footer {
+      color: #344767;
+    }
+    ul {
+      li {
+        a {
+          color: #344767 !important;
+        }
+      }
     }
   }
 `;
