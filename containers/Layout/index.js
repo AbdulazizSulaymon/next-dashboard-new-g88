@@ -67,7 +67,7 @@ const Layout = ({ children }) => {
           <Button className="btn-gradient text-white">Upgrade to pro</Button>
         </div>
       </div>
-      <div className="rightside ">
+      <div className="rightside">
         <header className="">
           <div className="d-flex justify-content-between align-items-center">
             <div>

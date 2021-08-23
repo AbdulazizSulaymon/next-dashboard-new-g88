@@ -105,7 +105,7 @@ const LayoutWrapper = styled.div`
       }
     }
   }
-  .rightSide {
+  .rightside {
     flex: 1;
     header {
       padding: ${padding};
