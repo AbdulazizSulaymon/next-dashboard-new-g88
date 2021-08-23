@@ -5,7 +5,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faHeart, faUserEdit } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useRouter } from "next/dist/client/router";
+import { useRouter } from "next/router";
 import Layout from "../containers/Layout";
 import {
   AppData,
@@ -18,8 +18,13 @@ import {
 import ProfileWrapper from "../Wrappers/ProfileWrapper";
 
 const Profile = () => {
+<<<<<<< HEAD
   // eslint-disable-next-line react-hooks/rules-of-hooks
+=======
+>>>>>>> 5c053b6a9463293c2f8e8b51e69c643f63a180be
   const router = useRouter();
+  console.log(router);
+
   return (
     <Layout>
       <ProfileWrapper>
@@ -52,12 +57,11 @@ const Profile = () => {
                     className="nav nav-pills nav-fill p-1 bg-transparent d-flex"
                     role="tablist"
                   >
-                    {AppData.map((v) => (
-                      <li className="nav-item">
+                    {AppData.map((v, i) => (
+                      <li className="nav-item" key={v.title}>
                         <a
-                          className={`nav-link mb-0 px-0 py-1${
-                            router.pathname === v.active ? "active_link" : ""
-                          }`}
+                          className={`nav-link mb-0 px-0 py-1${router.pathname === v.active ? "active_link" : ""
+                            }`}
                           data-bs-toggle="tab"
                           aria-selected="false"
                           role="tab"
@@ -86,15 +90,15 @@ const Profile = () => {
                     Account
                   </h6>
                   <ul className="d-flex list-group">
-                    {Check.map((v) => (
-                      <li className="list-group-item border-0 px-0 p-0">
+                    {Check.map((v, i) => (
+                      <li key={i} className="list-group-item border-0 px-0 p-0">
                         <div className="form-check form-switch ps-0">
                           <input
                             className="form-check-input ms-auto"
                             type="checkbox"
                           />
                           <label
-                            for="flexSwitchDefault"
+                            htmlFor="flexSwitchDefault"
                             className="form-check-label text-body ms-3 text-truncate w-80 mb-0"
                           >
                             {v.title}
@@ -107,8 +111,8 @@ const Profile = () => {
                     Application
                   </h6>
                   <ul className="d-flex list-group">
-                    {Application.map((v) => (
-                      <li className="list-group-item border-0 px-0">
+                    {Application.map((v, i) => (
+                      <li key={i} className="list-group-item border-0 px-0">
                         <div className="form-check form-switch ps-0">
                           <input
                             className="form-check-input ms-auto"
@@ -145,8 +149,8 @@ const Profile = () => {
                   </p>
                   <hr className="horizontal gray-light my-4"></hr>
                   <ul className="list-group">
-                    {Information.map((v) => (
-                      <li className="list-group-item border-0 ps-0 text-sm">
+                    {Information.map((v, i) => (
+                      <li key={i} className="list-group-item border-0 ps-0 text-sm">
                         <strong>{v.strong}</strong> {v.title}
                       </li>
                     ))}
@@ -168,8 +172,8 @@ const Profile = () => {
               </div>
               <div className="card-body p-3">
                 <ul className="list-group">
-                  {Conversations.map((v) => (
-                    <li className="list-group-item border-0 d-flex align-items-center px-0 mb-2">
+                  {Conversations.map((v, i) => (
+                    <li key={i} className="list-group-item border-0 d-flex align-items-center px-0 mb-2">
                       <div className="me-3">
                         <img
                           src={v.img}
@@ -243,11 +247,11 @@ const Profile = () => {
                 </div>
                 <div className="col-lg-6">
                   <ul className="nav nav-footer justify-content-center justify-content-lg-end">
-                    {Footer.map((v) => (
-                      <li className="nav-item">
+                    {Footer.map((v, i) => (
+                      <li key={i} className="nav-item">
                         <a
                           className="nav-link color"
-                          target="_blank"
+                          target="_blank" rel="noreferrer"
                           href="https://www.creative-tim.com/license"
                         >
                           {v.title}
