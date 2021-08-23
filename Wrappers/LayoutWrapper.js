@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 const padding = "20px";
 
 const LayoutWrapper = styled.div`
@@ -30,8 +29,8 @@ const LayoutWrapper = styled.div`
     }
 
     .soft {
-      font-family: 'Open Sans', sans-serif;
-      font-size: .875rem;
+      font-family: "Open Sans", sans-serif;
+      font-size: 0.875rem;
       color: rgb(52, 71, 103);
     }
 
@@ -73,8 +72,8 @@ const LayoutWrapper = styled.div`
             }
           }
           color: rgb(52, 71, 103);
-          opacity: .9;
-          font-family: 'Open Sans', sans-serif;
+          opacity: 0.9;
+          font-family: "Open Sans", sans-serif;
           font-size: 14px;
         }
       }
@@ -82,6 +81,7 @@ const LayoutWrapper = styled.div`
   }
   .rightside {
     flex: 1;
+<<<<<<< HEAD:containers/Layout/LayoutWrapper.js
       header{
         padding: ${padding};
         border-radius: 10px;
@@ -94,17 +94,22 @@ const LayoutWrapper = styled.div`
         margin-top: 10px;
         padding: ${padding};
       }
+=======
+>>>>>>> 2c06ac1cfceb9b30e3e26c3292fb4935f05f3159:Wrappers/LayoutWrapper.js
     header {
       padding: ${padding};
-      background-color: white;
       border-radius: 10px;
       position: sticky;
       top: 0;
+      background: transparent;
     }
+<<<<<<< HEAD:containers/Layout/LayoutWrapper.js
     .content {
       margin-top: 10px;
       padding: ${padding};
     }
+=======
+>>>>>>> 2c06ac1cfceb9b30e3e26c3292fb4935f05f3159:Wrappers/LayoutWrapper.js
   }
 `;
 

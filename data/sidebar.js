@@ -1,4 +1,4 @@
-import { faBuilding, faCopyright, faCreditCard, faDiceD6, faRocket, faTools, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faBuilding, faCopy, faCreditCard, faDiceD6, faRocket, faTools, faUser } from "@fortawesome/free-solid-svg-icons";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -37,7 +37,7 @@ export const accountPages = [
         href: "/profile"
     },
     {
-        icon: <FontAwesomeIcon className="icons" icon={faCopyright} />,
+        icon: <FontAwesomeIcon className="icons" icon={faCopy} />,
         title: "Sign in",
         href: "/sign-in"
     },

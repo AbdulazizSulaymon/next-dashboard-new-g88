@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
 import Layout from '../containers/Layout';
 import Link from "next/link";
+import { useEffect } from 'react';
 import TableWrapper from '../Wrappers/TabbleWrapper';
 import { Button } from '@material-ui/core';
 import { setTable, setTable2 } from '../redux/Action/TableAction';
@@ -8,15 +8,12 @@ import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 
-const table = () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
+const Table = () => {
     useEffect(() => {
         setTable();
         setTable2();
     }, []);
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const data = useSelector(state => state.TableReducer.tableData);
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const data2 = useSelector(state => state.TableReducer.tableData2);
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const loading = useSelector(state => state.TableReducer.loading);
@@ -134,9 +131,4 @@ const table = () => {
     )
 }
 
-export default table;
-
-
-export const search = () => {
-    
-}
+export default Table;
