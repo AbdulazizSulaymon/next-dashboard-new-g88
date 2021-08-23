@@ -29,6 +29,28 @@ const GlobalStyles = createGlobalStyle`
     .rounded{
         border-radius: 8px !important;
     }
+
+    .MuiDrawer-paperAnchorTop{
+                width: 80% !important;
+                margin: auto !important;
+                border-radius: 20px 20px 0 0;
+                top: 40px !important;
+                display: none;
+
+                ::-webkit-scrollbar {
+                width: 2px;
+                height: 7px;
+                }
+                ::-webkit-scrollbar-track {
+                background: #f1f1f1;
+                }
+                ::-webkit-scrollbar-thumb {
+                background: #394061;
+                }
+                ::-webkit-scrollbar-thumb:hover {
+                background: #394090;
+                }
+    } 
 `
 
 export default GlobalStyles;
