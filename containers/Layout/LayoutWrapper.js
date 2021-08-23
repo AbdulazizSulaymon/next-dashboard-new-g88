@@ -82,8 +82,6 @@ const LayoutWrapper = styled.div`
   }
   .rightside {
     flex: 1;
-
-<<<<<<< HEAD
       header{
         padding: ${padding};
         border-radius: 10px;
@@ -96,7 +94,6 @@ const LayoutWrapper = styled.div`
         margin-top: 10px;
         padding: ${padding};
       }
-=======
     header {
       padding: ${padding};
       background-color: white;
@@ -108,7 +105,6 @@ const LayoutWrapper = styled.div`
       margin-top: 10px;
       padding: ${padding};
     }
->>>>>>> 942035a86f7bc531b67595084a891cc0dc72e72c
   }
 `;
 

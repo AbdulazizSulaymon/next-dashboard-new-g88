@@ -4,6 +4,7 @@ import React from 'react'
 import { dashboardPages } from '../../data/sidebar'
 import LayoutWrapper from './LayoutWrapper'
 import Link from "next/link"
+import { Button } from '@material-ui/core';
 
 const Layout = ({ children }) => {
     return (
@@ -30,11 +31,12 @@ const Layout = ({ children }) => {
                         </Link>
                     </li>)}
                 </ul>
-                <p class="text-uppercase account">Account pages</p>
+                <p className="text-uppercase account">Account pages</p>
             </div>
             <div className="rightside ">
-                <header>
-                    <FontAwesomeIcon icon={faBars} />
+                <header className="d-flex align-items-center">
+                    <Button className="me-4"><FontAwesomeIcon icon={faBars} /></Button>
+                    <input type="text" className="form-control" placeholder="Search" />
                 </header>
                 <div className="content">
                     {children}
