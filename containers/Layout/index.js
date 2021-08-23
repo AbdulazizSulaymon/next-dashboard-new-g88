@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
@@ -46,7 +45,6 @@ const Layout = ({ children }) => {
         </LayoutWrapper>
     )
 }
-=======
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
@@ -121,6 +119,5 @@ const Layout = ({ children }) => {
     </LayoutWrapper>
   );
 };
->>>>>>> 2c06ac1cfceb9b30e3e26c3292fb4935f05f3159
 
 export default Layout;
