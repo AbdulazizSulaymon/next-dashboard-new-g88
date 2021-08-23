@@ -17,8 +17,10 @@ import {
 } from "../data/AppData";
 import ProfileWrapper from "../Wrappers/ProfileWrapper";
 
-const profile = () => {
+const Profile = () => {
   const router = useRouter();
+  console.log(router);
+
   return (
     <Layout>
       <ProfileWrapper>
@@ -51,12 +53,11 @@ const profile = () => {
                     className="nav nav-pills nav-fill p-1 bg-transparent d-flex"
                     role="tablist"
                   >
-                    {AppData.map((v) => (
-                      <li className="nav-item">
+                    {AppData.map((v, i) => (
+                      <li className="nav-item" key={v.title}>
                         <a
-                          className={`nav-link mb-0 px-0 py-1${
-                            router.pathname === v.active ? "active_link" : ""
-                          }`}
+                          className={`nav-link mb-0 px-0 py-1${router.pathname === v.active ? "active_link" : ""
+                            }`}
                           data-bs-toggle="tab"
                           aria-selected="false"
                           role="tab"
@@ -85,15 +86,15 @@ const profile = () => {
                     Account
                   </h6>
                   <ul className="d-flex list-group">
-                    {Check.map((v) => (
-                      <li key="" className="list-group-item border-0 px-0 p-0">
+                    {Check.map((v, i) => (
+                      <li key={i} className="list-group-item border-0 px-0 p-0">
                         <div className="form-check form-switch ps-0">
                           <input
                             className="form-check-input ms-auto"
                             type="checkbox"
                           />
                           <label
-                            for="flexSwitchDefault"
+                            htmlFor="flexSwitchDefault"
                             className="form-check-label text-body ms-3 text-truncate w-80 mb-0"
                           >
                             {v.title}
@@ -106,8 +107,8 @@ const profile = () => {
                     Application
                   </h6>
                   <ul className="d-flex list-group">
-                    {Application.map((v) => (
-                      <li className="list-group-item border-0 px-0">
+                    {Application.map((v, i) => (
+                      <li key={i} className="list-group-item border-0 px-0">
                         <div className="form-check form-switch ps-0">
                           <input
                             className="form-check-input ms-auto"
@@ -128,7 +129,7 @@ const profile = () => {
                 <div className="card-header pb-0 p-3">
                   <div className="row">
                     <div className="col-md-8 d-flex align-items-center">
-                      <h6 class="mb-0">Profile Information</h6>
+                      <h6 className="mb-0">Profile Information</h6>
                     </div>
                     <div className="col-md-4 text-end">
                       <FontAwesomeIcon icon={faUserEdit} />
@@ -144,8 +145,8 @@ const profile = () => {
                   </p>
                   <hr className="horizontal gray-light my-4"></hr>
                   <ul className="list-group">
-                    {Information.map((v) => (
-                      <li className="list-group-item border-0 ps-0 text-sm">
+                    {Information.map((v, i) => (
+                      <li key={i} className="list-group-item border-0 ps-0 text-sm">
                         <strong>{v.strong}</strong> {v.title}
                       </li>
                     ))}
@@ -162,13 +163,13 @@ const profile = () => {
             <div className="col-12 col-xl-4 mb-3">
               <div className="card h-100">
                 <div className="card-header pb-0 p-3">
-                  <h6 class="mb-0">Conversations</h6>
+                  <h6 className="mb-0">Conversations</h6>
                 </div>
               </div>
               <div className="card-body p-3">
                 <ul className="list-group">
-                  {Conversations.map((v) => (
-                    <li className="list-group-item border-0 d-flex align-items-center px-0 mb-2">
+                  {Conversations.map((v, i) => (
+                    <li key={i} className="list-group-item border-0 d-flex align-items-center px-0 mb-2">
                       <div className="me-3">
                         <img
                           src={v.img}
@@ -242,11 +243,11 @@ const profile = () => {
                 </div>
                 <div className="col-lg-6">
                   <ul className="nav nav-footer justify-content-center justify-content-lg-end">
-                    {Footer.map((v) => (
-                      <li className="nav-item">
+                    {Footer.map((v, i) => (
+                      <li key={i} className="nav-item">
                         <a
                           className="nav-link color"
-                          target="_blank"
+                          target="_blank" rel="noreferrer"
                           href="https://www.creative-tim.com/license"
                         >
                           {v.title}
@@ -264,4 +265,4 @@ const profile = () => {
   );
 };
 
-export default profile;
+export default Profile;
