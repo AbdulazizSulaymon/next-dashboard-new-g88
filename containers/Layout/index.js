@@ -3,11 +3,11 @@ import Link from "next/link";
 import { Button } from "@material-ui/core";
 import { dashboardPages, AccoundPages } from "../../data/sidebar";
 import LayoutWrapper from "./../../Wrappers/LayoutWrapper";
-import PersonIcon from '@material-ui/icons/Person';
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import SettingsIcon from "@material-ui/icons/Settings";
 import { useRouter } from "next/dist/client/router";
 import { AccessAlarm } from "@material-ui/icons";
+import PersonIcon from "@material-ui/icons/Person"
 
 const Layout = ({ children }) => {
   const router = useRouter();
@@ -28,8 +28,9 @@ const Layout = ({ children }) => {
         <ul className="my-4">
           {dashboardPages.map((v) => (
             <li
-              className={`mb-3 ms-2 ${router.pathname === v.href ? "active" : ""
-                }`}
+              className={`mb-3 ms-2 ${
+                router.pathname === v.href ? "active" : ""
+              }`}
               key={v.href}
             >
               <Link href={v.href}>

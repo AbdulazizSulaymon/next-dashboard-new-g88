@@ -108,16 +108,58 @@ export const Conversations = [
 
 export const Footer = [
     {
+        name: "Creative",
         title: "Creative Tim",
     },
     {
+        name: "About",
         title: "About Us",
     },
     {
+        name: "Blog",
         title: "Blog",
     },
     {
+        name: "License",
         title: "License",
     },
 ]
 
+export const Projects = [
+    {
+        img: "https://demos.creative-tim.com/soft-ui-dashboard/assets/img/home-decor-1.jpg",
+        prNumber: "Project #1",
+        title: "Modern",
+        subTitle: "As Uber works through a huge amount of internal management turmoil.",
+        imgs:[
+            {img: "https://demos.creative-tim.com/soft-ui-dashboard/assets/img/team-1.jpg", className: "avatar1"},
+            {img: "https://demos.creative-tim.com/soft-ui-dashboard/assets/img/team-2.jpg", className: "avatar2"},
+            {img: "https://demos.creative-tim.com/soft-ui-dashboard/assets/img/team-3.jpg", className: "avatar3"},
+            {img: "https://demos.creative-tim.com/soft-ui-dashboard/assets/img/team-4.jpg", className: "avatar4"},
+        ] 
+    },
+    {
+        img: "https://demos.creative-tim.com/soft-ui-dashboard/assets/img/home-decor-2.jpg",
+        prNumber: "Project #2",
+        title: "Scandinavian",
+        subTitle: "Music is something that every person has his or her own specific opinion about.",
+        imgs:[
+            {img: "https://demos.creative-tim.com/soft-ui-dashboard/assets/img/team-1.jpg", className: "avatar1"},
+            {img: "https://demos.creative-tim.com/soft-ui-dashboard/assets/img/team-2.jpg", className: "avatar2"},
+            {img: "https://demos.creative-tim.com/soft-ui-dashboard/assets/img/team-3.jpg", className: "avatar3"},
+            {img: "https://demos.creative-tim.com/soft-ui-dashboard/assets/img/team-4.jpg", className: "avatar4"},
+        ] 
+    },
+    {
+        img: "https://demos.creative-tim.com/soft-ui-dashboard/assets/img/home-decor-1.jpg",
+        prNumber: "Project #3",
+        title: "Modern",
+        subTitle: "As Uber works through a huge amount of internal management turmoil.",
+        imgs:[
+            {img: "https://demos.creative-tim.com/soft-ui-dashboard/assets/img/team-1.jpg", className: "avatar1"},
+            {img: "https://demos.creative-tim.com/soft-ui-dashboard/assets/img/team-2.jpg", className: "avatar2"},
+            {img: "https://demos.creative-tim.com/soft-ui-dashboard/assets/img/team-3.jpg", className: "avatar3"},
+            {img: "https://demos.creative-tim.com/soft-ui-dashboard/assets/img/team-4.jpg", className: "avatar4"},
+        ] 
+    },
+]

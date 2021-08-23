@@ -1,13 +1,15 @@
+import {useSelector} from 'react-redux'
 import {
   faFacebook,
   faInstagram,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { faHeart, faUserEdit } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faPlus, faUserEdit } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Layout from "../containers/Layout";
+import "bootstrap/dist/css/bootstrap.min.css";
 import {
   AppData,
   Application,
@@ -15,6 +17,7 @@ import {
   Conversations,
   Footer,
   Information,
+  Projects,
 } from "../data/AppData";
 import ProfileWrapper from "../Wrappers/ProfileWrapper";
 
@@ -35,12 +38,13 @@ const Profile = () => {
   }, []);
 
   const [applications, setApplications] = useState({});
-
+   const state= useSelector(state => state)
+   console.log(state);
   useEffect(() => {
     let apps = {};
     Application.map((v) => (apps[v.name] = v.checkeds));
 
-    setApplications(apps)
+    setApplications(apps);
   }, []);
 
   return (
@@ -78,8 +82,9 @@ const Profile = () => {
                     {AppData.map((v, i) => (
                       <li className="nav-item" key={v.title}>
                         <a
-                          className={`nav-link mb-0 px-0 py-1${router.pathname === v.active ? "active_link" : ""
-                            }`}
+                          className={`nav-link mb-0 px-0 py-1${
+                            router.pathname === v.active ? "active_link" : ""
+                          }`}
                           data-bs-toggle="tab"
                           aria-selected="false"
                           role="tab"
@@ -238,37 +243,57 @@ const Profile = () => {
               <div className="card mb-4 d-flex">
                 <div className="card-header pb-0 p-3">
                   <h6 className="color mb-1">Projects</h6>
-                  <p className="text-sm">Architects design houses</p>
+                  <p className="text-sm mb-3">Architects design houses</p>
                 </div>
                 <div className="card-body p-3">
                   <div className="row">
-                    <div className="col-xl-3 col-md-6 mb-xl-0 mb-4">
-                      <div className="card card-blog card-plain">
-                        <div className="position-relative">
-                          <a className="d-block shadow-xl border-radius-xl">
-                            <img
-                              src="https://demos.creative-tim.com/soft-ui-dashboard/assets/img/home-decor-1.jpg"
-                              className="img-fluid shadow border-radius-xl"
-                            />
-                          </a>
-                        </div>
-                        <div className="card-body px-1 pb-0">
-                          <p>Project #1</p>
-                          <a href="#">
-                            <h5>Modern</h5>
-                          </a>
-                          <p className="mb-4 text-sm">
-                            As Uber works through a huge amount of internal
-                            management turmoil.
-                          </p>
-                          <div className="d-flex align-items-center justify-content-between">
-                            <button
-                              type="button"
-                              className="btn btn-outline-primary btn-sm mb-0"
-                            >
-                              View Project
-                            </button>
+                    {Projects.map((v, i) => (
+                      <div className="col-xl-3 col-md-6 mb-xl-0 mb-4 position-relative" key={i}>
+                        <div className="card-blog card-plain">
+                          <div className="position-relative">
+                            <a className="d-block shadow-xl border-radius-xl">
+                              <img
+                                src={v.img}
+                                className="img-fluid shadow border-radius-xl"
+                              />
+                            </a>
                           </div>
+                          <div className="card-body px-1 pb-0">
+                            <p>{v.prNumber}</p>
+                            <a href="#" className="color">
+                              <h5>{v.title}</h5>
+                            </a>
+                            <p className="mb-4 text-sm">{v.subTitle}</p>
+                            <div className="d-flex align-items-center justify-content-between">
+                              <button
+                                type="button"
+                                className="btn btn-outline-primary btn-sm mb-0 text-uppercase"
+                              >
+                                View Project
+                              </button>
+                              <div className="avatar-group mt-2">
+                                {v.imgs.map ((v) => (
+                                  <a href="#" className="rounded-circle">
+                                  <img
+                                    src={v.img}
+                                    className={`avatars avatars-xs ${v.className}`}
+                                    alt="Image placeholder"
+                                  />
+                                </a>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                    <div class="col-xl-3 col-md-6 ">
+                      <div class="card h-100 card-plain border m-0">
+                        <div class="card-body d-flex flex-column justify-content-center text-center">
+                          <a href="#">
+                            <FontAwesomeIcon icon={faPlus} className="text-secondary" />
+                            <h5 class=" text-secondary"> New project </h5>
+                          </a>
                         </div>
                       </div>
                     </div>
