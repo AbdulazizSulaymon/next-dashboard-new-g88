@@ -1,12 +1,12 @@
 import React from 'react'
-import signUpWrapper from '../Wrappers/signUpWrapper'
+import SignUpWrapper from '../Wrappers/SignUpWrapper'
 
-const signUp = () => {
+const SignUp = () => {
     return (
-        <signUpWrapper>
-            
-        </signUpWrapper>
+        <SignUpWrapper>
+            <h1>Sign up</h1>
+        </SignUpWrapper>
     )
 }
 
-export default signUp
+export default SignUp

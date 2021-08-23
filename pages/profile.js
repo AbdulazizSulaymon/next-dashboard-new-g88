@@ -78,9 +78,8 @@ const Profile = () => {
                     {AppData.map((v, i) => (
                       <li className="nav-item" key={v.title}>
                         <a
-                          className={`nav-link mb-0 px-0 py-1${
-                            router.pathname === v.active ? "active_link" : ""
-                          }`}
+                          className={`nav-link mb-0 px-0 py-1${router.pathname === v.active ? "active_link" : ""
+                            }`}
                           data-bs-toggle="tab"
                           aria-selected="false"
                           role="tab"
@@ -144,7 +143,7 @@ const Profile = () => {
                             className="form-check-input ms-auto"
                             type="checkbox"
                             checked={applications[v.name]}
-                            onChange={(e) => 
+                            onChange={(e) =>
                               setApplications({
                                 ...applications,
                                 [v.name]: e.target.checked,
