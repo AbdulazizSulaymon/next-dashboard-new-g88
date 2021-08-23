@@ -12,6 +12,22 @@ const SignUpWrapper = styled.div`
         background-size: cover;
         background-position: 50%;
         background-image: url('https://demos.creative-tim.com/soft-ui-dashboard/assets/img/curved-images/curved14.jpg');       
+       position: relative;
+       .mask{
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           opacity: 0;
+           background-position: 50%;
+       }
+       .bg_gradient {
+            background-image: linear-gradient( 310deg, #141727, #3a416f);
+        } 
+        .opacity{
+            opacity: .6;
+        }
         .bbuy {
             background-image: linear-gradient( 310deg,#7928ca,#ff0080);
         }

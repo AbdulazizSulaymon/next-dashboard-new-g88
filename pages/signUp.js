@@ -39,8 +39,9 @@ const SignUp = () => {
         <SignUpWrapper>
             <div className="p-3">
                 <div className=" big-container container-fluid d-block text-white p-5 w-100 rounded bg-warning bgi">
+                    <span className="mask bg_gradient opacity"></span>
                     <div className="d-flex justify-content-between">
-                        <p className="fw-bold">Soft UI Dashboard</p>
+                        <p className="fw-bold text-white">Soft UI Dashboard</p>
                         <ul className="d-lg-flex d-none d-lg-block">
                             <li>Pages</li>
                             <li>Authentication</li>
