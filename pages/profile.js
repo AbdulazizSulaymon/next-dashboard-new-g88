@@ -94,7 +94,7 @@ const Profile = () => {
                             type="checkbox"
                           />
                           <label
-                            for="flexSwitchDefault"
+                            htmlFor="flexSwitchDefault"
                             className="form-check-label text-body ms-3 text-truncate w-80 mb-0"
                           >
                             {v.title}
@@ -247,7 +247,7 @@ const Profile = () => {
                       <li key={i} className="nav-item">
                         <a
                           className="nav-link color"
-                          target="_blank"
+                          target="_blank" rel="noreferrer"
                           href="https://www.creative-tim.com/license"
                         >
                           {v.title}
