@@ -4,10 +4,10 @@ import { Button } from "@material-ui/core";
 import { dashboardPages, AccoundPages } from "../../data/sidebar";
 import LayoutWrapper from "./../../Wrappers/LayoutWrapper";
 import NotificationsIcon from "@material-ui/icons/Notifications";
-import PersonIcon from "@material-ui/icons/Person";
 import SettingsIcon from "@material-ui/icons/Settings";
 import { useRouter } from "next/dist/client/router";
 import { AccessAlarm } from "@material-ui/icons";
+import PersonIcon from "@material-ui/icons/Person";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 
 const Layout = ({ children }) => {

@@ -13,7 +13,7 @@ const ProfileWrapper = styled.div`
   .avatar {
     height: 48px;
     width: 48px;
-    border-radius: .75rem;
+    border-radius: 0.75rem;
   }
   .color {
     color: ${color};
@@ -104,13 +104,98 @@ const ProfileWrapper = styled.div`
     background: none;
     border: none;
     .text-sm {
-      font-size: .875rem!important;
+      font-size: 0.875rem !important;
       color: ${iconColor};
     }
   }
   .card .card-body {
     font-family: "Open Sans" sans-serif;
     padding: 1.5rem;
+
+    .rounded-circle {
+      position: ab;
+    }
+
+    .card.card-plain {
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    .btn-outline-primary {
+      color: #cb0c9f !important;
+      border-color: #cb0c9f !important;
+      font-size: 12px;
+      font-family: "Open Sans" sans-serif;
+      font-weight: 400 !important;
+      &:hover {
+        background-color: white;
+        color: #cb0c9f !important;
+      }
+      &:focus {
+        box-shadow: #cb0c9f !important;
+      }
+    }
+
+    .border-radius-xl {
+      border-radius: 1rem;
+    }
+
+    .avatars {
+      color: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .avatar-group .avatars {
+      z-index: 2;
+      border: 2px solid #fff;
+    }
+    .avatar-group{
+      position: relative;
+      .avatar1{
+        position: absolute;
+        top: 0;
+        left: -80px;
+        &:hover{
+          z-index: 1000;
+        }
+      }
+      .avatar2{
+        position: absolute;
+        top: 0;
+        left: -66px;
+        &:hover{
+          z-index: 1000;
+        }
+      }
+      .avatar3{
+        position: absolute;
+        top: 0;
+        left: -55px;
+        &:hover{
+          z-index: 1000;
+        }
+      }
+      .avatar4{
+        position: absolute;
+        top: 0;
+        left: -45px;
+        &:hover{
+          z-index: 1000;
+        }
+      }
+      
+    }
+
+    .avatars-xs {
+      width: 24px !important;
+      height: 24px !important;
+      font-size: 0.75rem;
+      border-radius: 50%;
+      position: absolute;
+    }
 
     li,
     .form-check-label {
