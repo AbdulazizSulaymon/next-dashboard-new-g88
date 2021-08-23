@@ -70,7 +70,7 @@ const Table = () => {
                                         </tr>)}
 
                                     </tbody>
-                                    </table>
+                                </table>
                             </div>
                         </div>
                         ||
@@ -78,52 +78,52 @@ const Table = () => {
                     }
                     {
                         loading && "loading" || data2.length > 0 &&
-                    <div className="col-12">
-                        <div className="tableShadow p-3 rounded">
-                            <h5 className="">Project table</h5>
+                        <div className="col-12">
+                            <div className="tableShadow p-3 rounded">
+                                <h5 className="">Project table</h5>
 
-                            <table className="table align-items-center mb-0">
-                                <thead>
-                                    <tr>
-                                        <th className={"text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"}>PROJECT</th>
-                                        <th className={"text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 pe-2"}>BUDGET</th>
-                                        <th className={"text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"}>STATUS</th>
-                                        <th className={"text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"}>COMPLETION</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {data2.map((v, i) => <tr key={i}>
-                                        <td className={"align-middle"}>
-                                            <div className={"d-flex align-items-center"}>
-                                                <img className={"project_img"} src={v.img} alt="" />
-                                                <p className={"mb-0 ms-2 text-sm"}>Spotify</p>
-                                            </div>
-                                        </td>
-                                        <td className={"align-middle"}><p className={"text-sm mb-0"}>{v.price}</p></td>
-                                        <td className={"align-middle"}>
-                                            <p className={"text-xs text-secondary m-0"} style={{ fontWeight: "600" }}>{v.status}</p>
-                                        </td>
-                                        <td className={"align-middle"}>
-                                            <div className={"d-flex align-items-center justify-content-center"}>
-                                                <p className={"text-xs text-secondary m-0 me-3"} style={{ fontWeight: "600" }}>{v.completion}%</p>
-                                                <div className={"position-relative progres_line"}>
-                                                    <div className={`position-absolute progres_line_info  ${v.completion > 0 && v.completion <= 30 && "bg-danger" || v.completion <= 50 && "bg-warning" || v.completion <= 80 && "bg-info" || v.completion > 80 && "bg-success"}`} style={{ width: v.completion + "%" }}></div>
+                                <table className="table align-items-center mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th className={"text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"}>PROJECT</th>
+                                            <th className={"text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 pe-2"}>BUDGET</th>
+                                            <th className={"text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"}>STATUS</th>
+                                            <th className={"text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"}>COMPLETION</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {data2.map((v, i) => <tr key={i}>
+                                            <td className={"align-middle"}>
+                                                <div className={"d-flex align-items-center"}>
+                                                    <img className={"project_img"} src={v.img} alt="" />
+                                                    <p className={"mb-0 ms-2 text-sm"}>Spotify</p>
                                                 </div>
-                                            </div>
-                                        </td>
-                                        <td className={"align-middle"}>
-                                            <FontAwesomeIcon icon={faEllipsisV} />
-                                        </td>
-                                    </tr>)}
-                                </tbody>
-                            </table>
+                                            </td>
+                                            <td className={"align-middle"}><p className={"text-sm mb-0"}>{v.price}</p></td>
+                                            <td className={"align-middle"}>
+                                                <p className={"text-xs text-secondary m-0"} style={{ fontWeight: "600" }}>{v.status}</p>
+                                            </td>
+                                            <td className={"align-middle"}>
+                                                <div className={"d-flex align-items-center justify-content-center"}>
+                                                    <p className={"text-xs text-secondary m-0 me-3"} style={{ fontWeight: "600" }}>{v.completion}%</p>
+                                                    <div className={"position-relative progres_line"}>
+                                                        <div className={`position-absolute progres_line_info  ${v.completion > 0 && v.completion <= 30 && "bg-danger" || v.completion <= 50 && "bg-warning" || v.completion <= 80 && "bg-info" || v.completion > 80 && "bg-success"}`} style={{ width: v.completion + "%" }}></div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td className={"align-middle"}>
+                                                <FontAwesomeIcon icon={faEllipsisV} />
+                                            </td>
+                                        </tr>)}
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                         || error && "Error" || "no DATA"
                     }
 
-                        </div>
+                </div>
             </TableWrapper>
         </Layout>
     )

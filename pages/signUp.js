@@ -7,6 +7,7 @@ const SignUp = () => {
             <div className="container">
                  
             </div>
+            <h1>Sign up</h1>
         </SignUpWrapper>
     )
 }
