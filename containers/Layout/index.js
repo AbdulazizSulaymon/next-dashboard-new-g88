@@ -3,7 +3,8 @@ import Link from "next/link";
 import { Button } from "@material-ui/core";
 import { dashboardPages, AccoundPages } from "../../data/sidebar";
 import LayoutWrapper from "./../../Wrappers/LayoutWrapper";
-import { AccessAlarm , PersonIcon } from "@material-ui/icons";
+import { AccessAlarm } from "@material-ui/icons/AccessAlarm";
+import { PersonIcon } from "@material-ui/icons/PersonIcon";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import SettingsIcon from "@material-ui/icons/Settings";
 import { useRouter } from "next/dist/client/router";
@@ -58,7 +59,7 @@ const Layout = ({ children }) => {
           <div className="full_back"></div>
           <div className="card_body">
             <div className="rounded bg-white w-25 my-3 text-dark text-center ms-3">
-              <PersonIcon  />
+              <PersonIcon />
             </div>
             <div className="docs_info ms-4">
               <h6 className="texts">Need help?</h6>
@@ -88,7 +89,7 @@ const Layout = ({ children }) => {
             <div className="d-flex align-items-center">
               <div className="d-flex align-items-center input-group">
                 <span className="input-group-text">
-                <AccessAlarm />
+                  <AccessAlarm />
                 </span>
                 <input className="input" placeholder="Type here..."></input>
               </div>
