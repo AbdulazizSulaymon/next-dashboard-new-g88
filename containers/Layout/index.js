@@ -7,6 +7,7 @@ import NotificationsIcon from "@material-ui/icons/Notifications";
 import SettingsIcon from "@material-ui/icons/Settings";
 import { useRouter } from "next/dist/client/router";
 import { AccessAlarm } from "@material-ui/icons";
+import PersonIcon from "@material-ui/icons/Person"
 
 const Layout = ({ children }) => {
   const router = useRouter();
