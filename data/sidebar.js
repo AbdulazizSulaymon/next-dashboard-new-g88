@@ -20,10 +20,10 @@ const dashboardPages = [
   {
     icon: <HomeIcon />,
     title: "Dashboard",
-    href: "/dashboard",
+    href: "/",
     active: "active",
   },
-  { icon: <ApartmentIcon />, title: "Tables", href: "/tables" },
+  { icon: <ApartmentIcon />, title: "Tables", href: "/table" },
   { icon: <AssessmentIcon />, title: "Billing", href: "/billing" },
   {
     icon: <DashboardIcon />,

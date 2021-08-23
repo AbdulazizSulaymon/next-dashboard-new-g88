@@ -1,11 +1,12 @@
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { dashboardPages, AccoundPages } from "../../data/sidebar";
 import Link from "next/link";
-import PersonIcon from "@material-ui/icons/Person";
 import { Button } from "@material-ui/core";
 import LayoutWrapper from "./../../Wrappers/LayoutWrapper";
+import { AccessAlarm } from "@material-ui/icons";
+import PersonIcon from "@material-ui/icons/Person";
+import NotificationsIcon from "@material-ui/icons/Notifications";
+import SettingsIcon from "@material-ui/icons/Settings";
 
 const Layout = ({ children }) => {
   return (
@@ -67,6 +68,33 @@ const Layout = ({ children }) => {
         </div>
       </div>
       <div className="rightside ">
+        <header className="">
+          <div className="d-flex justify-content-between align-items-center">
+            <div>
+              <div className="d-flex align-items-center">
+                <Link href="/">
+                  <a className="text-secondary">Pages</a>
+                </Link>
+                <p className="mb-0 ms-2">/ Dashboard</p>
+              </div>
+              <p className="fw-bold">Dashboard</p>
+            </div>
+            <div className="d-flex align-items-center">
+              <div className="d-flex align-items-center input-group">
+                <span className="input-group-text">
+                  <AccessAlarm />
+                </span>
+                <input className="input" placeholder="Type here..."></input>
+              </div>
+              <div className="d-flex align-items-center mx-3">
+                <PersonIcon />
+                <p className="mb-0 fw-bold">SignIn</p>
+              </div>
+              <NotificationsIcon className="me-2" />
+              <SettingsIcon className="" />
+            </div>
+          </div>
+        </header>
         <div className="content">{children}</div>
       </div>
     </LayoutWrapper>

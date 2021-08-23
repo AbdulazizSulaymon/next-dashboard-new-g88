@@ -26,33 +26,6 @@ export default function Home() {
   return (
     <Layout>
       <div className="rightSide">
-        <header className="">
-          <div className="d-flex justify-content-between align-items-center">
-            <div>
-              <div className="d-flex align-items-center">
-                <Link href="/">
-                  <a className="text-secondary">Pages</a>
-                </Link>
-                <p className="mb-0 ms-2">/ Dashboard</p>
-              </div>
-              <p className="fw-bold">Dashboard</p>
-            </div>
-            <div className="d-flex align-items-center">
-              <div className="d-flex align-items-center input-group">
-                <span className="input-group-text">
-                  <AccessAlarm />
-                </span>
-                <input className="input" placeholder="Type here..."></input>
-              </div>
-              <div className="d-flex align-items-center mx-3">
-                <PersonIcon />
-                <p className="mb-0 fw-bold">SignIn</p>
-              </div>
-              <NotificationsIcon className="me-2" />
-              <SettingsIcon className="" />
-            </div>
-          </div>
-        </header>
         <div className="content mt-2">
           <div className="container">
             <div className="row">
