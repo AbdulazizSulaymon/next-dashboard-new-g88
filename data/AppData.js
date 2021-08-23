@@ -109,8 +109,3 @@ export const Footer = [
     },
 ]
 
-export const Projects = [
-    {
-
-    },
-]
