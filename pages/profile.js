@@ -6,6 +6,7 @@ import {
 import { faHeart, faUserEdit } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import Layout from "../containers/Layout";
 import {
   AppData,
@@ -19,7 +20,16 @@ import ProfileWrapper from "../Wrappers/ProfileWrapper";
 
 const Profile = () => {
   const router = useRouter();
-  console.log(router);
+
+  const [checks, setChecks] = useState({ check1: true, check2: true, check3: true })
+
+  useEffect(() => {
+    let obj = {};
+    Check.map(v => obj[v.name] = v.checked);
+
+    setChecks(obj);
+  }, [])
+
 
   return (
     <Layout>
@@ -92,9 +102,11 @@ const Profile = () => {
                           <input
                             className="form-check-input ms-auto"
                             type="checkbox"
+                            checked={checks[v.name]}
+                            onChange={(e) => setChecks({ ...checks, [v.name]: e.target.checked })}
                           />
                           <label
-                            for="flexSwitchDefault"
+                            htmlFor="flexSwitchDefault"
                             className="form-check-label text-body ms-3 text-truncate w-80 mb-0"
                           >
                             {v.title}
@@ -247,7 +259,7 @@ const Profile = () => {
                       <li key={i} className="nav-item">
                         <a
                           className="nav-link color"
-                          target="_blank"
+                          target="_blank" rel="noreferrer"
                           href="https://www.creative-tim.com/license"
                         >
                           {v.title}
