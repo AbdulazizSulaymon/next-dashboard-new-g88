@@ -21,15 +21,27 @@ import ProfileWrapper from "../Wrappers/ProfileWrapper";
 const Profile = () => {
   const router = useRouter();
 
-  const [checks, setChecks] = useState({ check1: true, check2: true, check3: true })
+  const [checks, setChecks] = useState({
+    check1: true,
+    check2: true,
+    check3: true,
+  });
 
   useEffect(() => {
     let obj = {};
-    Check.map(v => obj[v.name] = v.checked);
+    Check.map((v) => (obj[v.name] = v.checked));
 
     setChecks(obj);
-  }, [])
+  }, []);
 
+  const [applications, setApplications] = useState({});
+
+  useEffect(() => {
+    let apps = {};
+    Application.map((v) => (apps[v.name] = v.checkeds));
+
+    setApplications(apps)
+  }, []);
 
   return (
     <Layout>
@@ -66,8 +78,9 @@ const Profile = () => {
                     {AppData.map((v, i) => (
                       <li className="nav-item" key={v.title}>
                         <a
-                          className={`nav-link mb-0 px-0 py-1${router.pathname === v.active ? "active_link" : ""
-                            }`}
+                          className={`nav-link mb-0 px-0 py-1${
+                            router.pathname === v.active ? "active_link" : ""
+                          }`}
                           data-bs-toggle="tab"
                           aria-selected="false"
                           role="tab"
@@ -87,7 +100,7 @@ const Profile = () => {
         <div className="container-fluid py-5 mt-4">
           <div className="row">
             <div className="col-12 col-xl-4 mb-3">
-              <div className="card h-100 mb-3">
+              <div className="card h-100 mb-5">
                 <div className="card-header p-3">
                   <h6 className="mb-0 color">Platform Settings</h6>
                 </div>
@@ -103,7 +116,12 @@ const Profile = () => {
                             className="form-check-input ms-auto"
                             type="checkbox"
                             checked={checks[v.name]}
-                            onChange={(e) => setChecks({ ...checks, [v.name]: e.target.checked })}
+                            onChange={(e) =>
+                              setChecks({
+                                ...checks,
+                                [v.name]: e.target.checked,
+                              })
+                            }
                           />
                           <label
                             htmlFor="flexSwitchDefault"
@@ -125,6 +143,13 @@ const Profile = () => {
                           <input
                             className="form-check-input ms-auto"
                             type="checkbox"
+                            checked={applications[v.name]}
+                            onChange={(e) => 
+                              setApplications({
+                                ...applications,
+                                [v.name]: e.target.checked,
+                              })
+                            }
                           />
                           <label className="form-check-label text-body ms-3 text-truncate w-80 mb-0">
                             {v.title}
@@ -137,7 +162,7 @@ const Profile = () => {
               </div>
             </div>
             <div className="col-12 col-xl-4 mb-3">
-              <div className="card h-100">
+              <div className="card h-100 mb-5">
                 <div className="card-header pb-0 p-3">
                   <div className="row">
                     <div className="col-md-8 d-flex align-items-center">
@@ -158,7 +183,10 @@ const Profile = () => {
                   <hr className="horizontal gray-light my-4"></hr>
                   <ul className="list-group">
                     {Information.map((v, i) => (
-                      <li key={i} className="list-group-item border-0 ps-0 text-sm">
+                      <li
+                        key={i}
+                        className="list-group-item border-0 ps-0 text-sm"
+                      >
                         <strong>{v.strong}</strong> {v.title}
                       </li>
                     ))}
@@ -173,35 +201,38 @@ const Profile = () => {
               </div>
             </div>
             <div className="col-12 col-xl-4 mb-3">
-              <div className="card h-100">
+              <div className="card h-100 mb-5">
                 <div className="card-header pb-0 p-3">
                   <h6 className="mb-0">Conversations</h6>
                 </div>
-              </div>
-              <div className="card-body p-3">
-                <ul className="list-group">
-                  {Conversations.map((v, i) => (
-                    <li key={i} className="list-group-item border-0 d-flex align-items-center px-0 mb-2">
-                      <div className="me-3">
-                        <img
-                          src={v.img}
-                          alt="kal"
-                          className="border-radius-lg shadow avatar"
-                        />
-                      </div>
-                      <div className="d-flex align-items-start flex-column justify-content-center">
-                        <h6 className="mb-0 text-sm">{v.name}</h6>
-                        <p className="mb-0 text-xs">{v.title}</p>
-                      </div>
-                      <a
-                        className="btn btn-link pe-3 ps-0 mb-0 ms-auto text-uppercase"
-                        href="#"
+                <div className="card-body p-3">
+                  <ul className="list-group">
+                    {Conversations.map((v, i) => (
+                      <li
+                        key={i}
+                        className="list-group-item border-0 d-flex align-items-center px-0 mb-0"
                       >
-                        {v.reply}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+                        <div className="me-3">
+                          <img
+                            src={v.img}
+                            alt="kal"
+                            className="border-radius-lg shadow avatar"
+                          />
+                        </div>
+                        <div className="d-flex align-items-start flex-column justify-content-center">
+                          <h6 className="mb-0 text-sm">{v.name}</h6>
+                          <p className="mb-0 text-xs">{v.title}</p>
+                        </div>
+                        <a
+                          className="btn btn-link pe-3 ps-0 mb-0 ms-auto text-uppercase"
+                          href="#"
+                        >
+                          {v.reply}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
             <div className="col-12 mt-4">
@@ -232,7 +263,12 @@ const Profile = () => {
                             management turmoil.
                           </p>
                           <div className="d-flex align-items-center justify-content-between">
-                            <button type="button" className="btn btn-outline-primary btn-sm mb-0">View Project</button>
+                            <button
+                              type="button"
+                              className="btn btn-outline-primary btn-sm mb-0"
+                            >
+                              View Project
+                            </button>
                           </div>
                         </div>
                       </div>
@@ -259,7 +295,8 @@ const Profile = () => {
                       <li key={i} className="nav-item">
                         <a
                           className="nav-link color"
-                          target="_blank" rel="noreferrer"
+                          target="_blank"
+                          rel="noreferrer"
                           href="https://www.creative-tim.com/license"
                         >
                           {v.title}
