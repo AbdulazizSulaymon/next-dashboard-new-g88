@@ -12,8 +12,8 @@ const SignUpWrapper = styled.div`
         background-size: cover;
         background-position: 50%;
         background-image: url('https://demos.creative-tim.com/soft-ui-dashboard/assets/img/curved-images/curved14.jpg');       
-       position: relative;
-       .mask{
+       /* position: relative; */
+       /* .mask{
            position: absolute;
            top: 0;
            left: 0;
@@ -27,7 +27,7 @@ const SignUpWrapper = styled.div`
         } 
         .opacity{
             opacity: .6;
-        }
+        } */
         .bbuy {
             background-image: linear-gradient( 310deg,#7928ca,#ff0080);
         }
@@ -47,6 +47,16 @@ const SignUpWrapper = styled.div`
         .bsign {
             background-image: linear-gradient(310deg,#141727,#3a416f);
         }
+    }
+    a {
+        color: white;
+        &:hover {
+            color: rgba(158,158,158,1);
+        }
+    }
+    .button-link {
+        color: gray !important;
+        margin-right: 30px;
     }
 `;
 

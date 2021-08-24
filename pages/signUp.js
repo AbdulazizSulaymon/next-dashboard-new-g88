@@ -1,11 +1,12 @@
 import React from 'react'
-import { faApple, faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { faApple, faFacebook, faGit, faGithub, faGoogle, faInstagram, faPinterest, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import SignUpWrapper from '../Wrappers/SignUpWrapper';
 import Drawer from '@material-ui/core/Drawer';
 import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faBaseballBall } from '@fortawesome/free-solid-svg-icons';
+import Link from "next/link";
 
 const SignUp = () => {
     const [state, setState] = React.useState({
@@ -30,7 +31,7 @@ const SignUp = () => {
                     <li className="mx-2">Docs</li>
                 </ul>
                 <Button variant="contained" className="rounded-pill bbuy me-3" color="secondary">
-                   <small> Buy now</small>
+                    <small> Buy now</small>
                 </Button>
             </div>
         </List>
@@ -39,15 +40,15 @@ const SignUp = () => {
         <SignUpWrapper>
             <div className="p-3">
                 <div className=" big-container container-fluid d-block text-white p-5 w-100 rounded bg-warning bgi">
-                    <span className="mask bg_gradient opacity"></span>
+                    {/* <span className="mask bg_gradient opacity"></span> */}
                     <div className="d-flex justify-content-between">
-                        <p className="fw-bold text-white">Soft UI Dashboard</p>
+                        <p className="fw-bold text-white"><Link href="/"><a>Soft UI Dashboard</a></Link></p>
                         <ul className="d-lg-flex d-none d-lg-block">
-                            <li>Pages</li>
-                            <li>Authentication</li>
-                            <li>Applications</li>
-                            <li>Ecommerce</li>
-                            <li>Docs</li>
+                            <li><Link href="/" ><a>Pages</a></Link></li>
+                            <li><Link href="/table" ><a>Authentication</a></Link></li>
+                            <li><Link href="/signIn" ><a>Applications</a></Link></li>
+                            <li><Link href="/" ><a>Ecommerce</a></Link></li>
+                            <li><Link href="/" ><a>Docs</a></Link></li>
                         </ul>
                         <Button variant="contained" className="rounded-pill px-5 bbuy d-none d-lg-block" color="secondary">
                             BUY NOW
@@ -77,7 +78,7 @@ const SignUp = () => {
                                 <h5>Register with</h5>
                                 <div className="row px-5 mt-3">
                                     <a href="https://www.facebook.com/" className="col-3 mx-auto border p-2 rounded"><FontAwesomeIcon className="fs-2 text-primary" icon={faFacebook} /></a>
-                                    <a href="https://www.apple.com/" className="col-3 mx-auto border p-2 rounded"><FontAwesomeIcon className="fs-2" icon={faApple} /></a>
+                                    <a href="https://www.apple.com/" className="col-3 mx-auto border p-2 rounded"><FontAwesomeIcon className="fs-2 text-dark" icon={faApple} /></a>
                                     <a href="https://www.google.com/" className="col-3 mx-auto border p-2 rounded"><FontAwesomeIcon className="fs-2 text-danger" icon={faGoogle} /></a>
                                 </div>
                                 <p className="mx-auto text-secondary mt-3">or</p>
@@ -86,12 +87,30 @@ const SignUp = () => {
                                 <input type="password" placeholder="Password" className="mt-3 p-2 rounded border" />
                                 <div className="d-flex justify-content-center align-items-center my-3 mx-0">
                                     <input type="checkbox" />
-                                    <p className="mb-0 ms-2">I agree the <a className="fw-bold" href="#">Terms and Conditions</a></p>
+                                    <p className="mb-0 ms-2">I agree the <a className="fw-bold text-dark" href="#">Terms and Conditions</a></p>
                                 </div>
                                 <Button className="mt-1 rounded text-white bsign p-2">SIGN UP</Button>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="py-5">
+                    <ul className="d-flex justify-content-center mt-5">
+                        <li><Link href="/"><a className="button-link">Company</a></Link></li>
+                        <li><Link href="/"><a className="button-link">About Us</a></Link></li>
+                        <li><Link href="/"><a className="button-link">Team</a></Link></li>
+                        <li><Link href="/"><a className="button-link">Products</a></Link></li>
+                        <li><Link href="/"><a className="button-link">Blog</a></Link></li>
+                        <li><Link href="/"><a className="button-link">Pricing</a></Link></li>
+                    </ul>
+                    <ul className="d-flex justify-content-center mt-5">
+                        <li><Link href="/"><a className="button-link"><FontAwesomeIcon icon={faBaseballBall}></FontAwesomeIcon> </a></Link></li>
+                        <li><Link href="/"><a className="button-link"><FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon> </a></Link></li>
+                        <li><Link href="/"><a className="button-link"><FontAwesomeIcon icon={faInstagram}></FontAwesomeIcon> </a></Link></li>
+                        <li><Link href="/"><a className="button-link"><FontAwesomeIcon icon={faPinterest}></FontAwesomeIcon> </a></Link></li>
+                        <li><Link href="/"><a className="button-link"><FontAwesomeIcon icon={faGithub}></FontAwesomeIcon> </a></Link></li>
+                    </ul>
+                    <p className="text-secondary text-center mt-4">Copyright © 2021 Soft by Creative Tim.</p>
                 </div>
             </div>
         </SignUpWrapper>
