@@ -15,6 +15,7 @@ const LayoutWrapper = styled.div`
     top: 0;
     left: 0;
     overflow-y: auto !important;
+    position: relative;
     .logo {
       height: 30px !important;
     }
@@ -32,6 +33,7 @@ const LayoutWrapper = styled.div`
     }
     .cardBox {
       position: relative;
+      bottom: 0;
       display: flex;
       flex-direction: column;
       min-width: 0;
@@ -108,6 +110,41 @@ const LayoutWrapper = styled.div`
       }
     }
   }
+  .input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+    .input-group-text {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 0.75rem;
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.4rem;
+      color: #344767;
+      text-align: center;
+      white-space: nowrap;
+      background-color: #fff;
+      border: 1px solid #d2d6da;
+      border-radius: 0.5rem;
+    }
+    .input {
+      flex: 1 1 auto;
+      width: 1%;
+      min-width: 0;
+      border-left: 0 !important;
+      padding-left: 0;
+      margin-left: -1px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      padding: 0.5rem 0.75rem;
+      border: 1px solid #d2d6da;
+      outline-color: #d40d98;
+      border-radius: 0.5rem;
+    }
+  }
   .rightside {
     flex: 1;
     header {
@@ -117,42 +154,8 @@ const LayoutWrapper = styled.div`
       top: 0;
       left: 0;
       backdrop-filter: blur(5px);
-      z-index: 20000;
-      .input-group {
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: stretch;
-        width: 100%;
-        .input-group-text {
-          display: flex;
-          align-items: center;
-          padding: 0.5rem 0.75rem;
-          font-size: 0.875rem;
-          font-weight: 400;
-          line-height: 1.4rem;
-          color: #344767;
-          text-align: center;
-          white-space: nowrap;
-          background-color: #fff;
-          border: 1px solid #d2d6da;
-          border-radius: 0.5rem;
-        }
-        .input {
-          flex: 1 1 auto;
-          width: 1%;
-          min-width: 0;
-          border-left: 0 !important;
-          padding-left: 0;
-          margin-left: -1px;
-          border-top-left-radius: 0;
-          border-bottom-left-radius: 0;
-          padding: 0.5rem 0.75rem;
-          border: 1px solid #d2d6da;
-          outline-color: #d40d98;
-          border-radius: 0.5rem;
-        }
-      }
+      z-index: 1000;
+      overflow-x: hidden !important;
     }
     .content {
       .dashboardBox {
@@ -344,6 +347,7 @@ const LayoutWrapper = styled.div`
     }
   }
   .footer {
+    overflow-x: hidden !important;
     .text_footer {
       color: #344767;
     }

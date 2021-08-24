@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
     body{
         background-color: #F8F9FA;
-        /* background-color: #344767; */
+        overflow-x: hidden;
     }
 
     ul{
@@ -29,28 +29,27 @@ const GlobalStyles = createGlobalStyle`
     .rounded{
         border-radius: 8px !important;
     }
-
-    .MuiDrawer-paperAnchorTop{
-                width: 80% !important;
-                margin: auto !important;
-                border-radius: 20px 20px 0 0;
-                top: 40px !important;
-                display: none;
-
-                ::-webkit-scrollbar {
-                width: 2px;
-                height: 7px;
-                }
-                ::-webkit-scrollbar-track {
-                background: #f1f1f1;
-                }
-                ::-webkit-scrollbar-thumb {
-                background: #394061;
-                }
-                ::-webkit-scrollbar-thumb:hover {
-                background: #394090;
-                }
-    } 
-`
+    .sidebar_res{
+        margin: 10px 50px;
+    }
+    .sidebar_res {
+        ul {
+        li {
+        &.active {
+          padding: 10px 20px;
+          background-color: #fff;
+          border-radius: 10px;
+          box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+          .icon {
+            background-color: #cb0c9f;
+            color: #fff !important;
+          }
+          a {
+            color: #000;
+            font-weight: 600;
+          }
+        }}}
+    }
+`;
 
 export default GlobalStyles;

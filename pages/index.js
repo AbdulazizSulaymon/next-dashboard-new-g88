@@ -25,7 +25,10 @@ export default function Home() {
           <div className="container">
             <div className="row">
               {boxes.map((v) => (
-                <div className="col-xl-3 col-sm-6 mb-xl-0 mb-4" key={v.icon}>
+                <div
+                  className="col-xxl-3 col-xl-4 col-lg-6 col-sm-6 mb-xl-0 mb-4 mt-2"
+                  key={v.icon}
+                >
                   <div className="dashboardBox">
                     <div className="dBox p-3">
                       <div className="row">
@@ -54,11 +57,11 @@ export default function Home() {
               ))}
             </div>
             <div className="row">
-              <div className="col-lg-7 mb-lg-0 mb-4 mt-4">
+              <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-7 mb-lg-0 mb-4 mt-4">
                 <div className="dashboardBox">
                   <div className="dBox p-3">
                     <div className="row">
-                      <div className="col-lg-6">
+                      <div className="col-xl-6 col-lg-12">
                         <div className="d-flex flex-column h-100">
                           <p className="fw-bold mb-1 pt-2 subtitle fs-6">
                             Built by developers
@@ -77,7 +80,7 @@ export default function Home() {
                           </a>
                         </div>
                       </div>
-                      <div className="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
+                      <div className="col-xl-6 col-lg-12 ms-auto text-center mt-5 mt-lg-0">
                         <div className="bg_gradient h-100">
                           <img
                             className="position-absolute h-100 w-50 d-none top-0 d-lg-block"
@@ -97,7 +100,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-5 mt-4">
+              <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-5 mt-4">
                 <div className="dashboardBox p-3 h-100">
                   <div className="overflow-hidden position-relative h-100 bg_rocket">
                     <span className="mask bg_gr_dark"></span>
@@ -123,7 +126,7 @@ export default function Home() {
             </div>
           </div>
           <div className="row my-4">
-            <div className="col-lg-8 col-md-6 m-0 mb-4">
+            <div className="col-12 col-sm-12 col-xl-8 col-lg-12 col-md-12 m-0">
               <div className="dashboardBox">
                 <div className="box_header pb-0">
                   <div className="row">
