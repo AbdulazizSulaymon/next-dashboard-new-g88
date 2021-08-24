@@ -30,7 +30,7 @@ const GlobalStyles = createGlobalStyle`
         border-radius: 8px !important;
     }
     .sidebar_res{
-        margin: 100px 50px;
+        margin: 10px 50px;
     }
     .sidebar_res {
         ul {

@@ -59,6 +59,24 @@ const Layout = ({ children }) => {
               </li>
             ))}
           </ul>
+          <ul className="my-4">
+            <small className="text-secondary mb-5">ACCOUNT PAGES</small>
+            {AccoundPages.map((v) => (
+              <li
+                className={`my-3 ms-2 ${
+                  router.pathname === v.href ? "active" : ""
+                }`}
+                key={v.href}
+              >
+                <Link href={v.href}>
+                  <a className="item d-flex align-items-center">
+                    <div className="icon rounded shadow">{v.icon}</div>
+                    <p className="ms-3 mb-0"> {v.title}</p>
+                  </a>
+                </Link>
+              </li>
+            ))}
+          </ul>
           <Button
             variant="contained"
             className="rounded-pill bbuy me-3"
@@ -185,7 +203,7 @@ const Layout = ({ children }) => {
                 {["left"].map((anchor) => (
                   <React.Fragment key={anchor}>
                     <Button onClick={toggleDrawer(anchor, true)}>
-                      <FontAwesomeIcon className="text-dark" icon={faBars} />
+                      <FontAwesomeIcon className="text-dark " icon={faBars} />
                     </Button>
                     <Drawer
                       anchor={anchor}
