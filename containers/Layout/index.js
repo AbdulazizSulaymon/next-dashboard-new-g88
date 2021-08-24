@@ -33,6 +33,15 @@ const Layout = ({ children }) => {
     <LayoutWrapper>
       <List>
         <div className="sidebar_res">
+          <div>
+            <div className="d-flex align-items-center">
+              <Link href="/">
+                <a className="text-secondary">Pages</a>
+              </Link>
+              <p className="mb-0 ms-2">/ Dashboard</p>
+            </div>
+            <p className="fw-bold">Dashboard</p>
+          </div>
           <ul className="my-4">
             {dashboardPages.map((v) => (
               <li
@@ -166,9 +175,11 @@ const Layout = ({ children }) => {
                 </span>
                 <input className="input" placeholder="Type here..."></input>
               </div>
-              <div className="d-flex align-items-center mx-3 d-none d-md-block">
+              <div className="d-flex align-items-center mx-3 d-none d-md-flex">
                 <PersonIcon />
-                <p className="mb-0 fw-bold">SignIn</p>
+                <Link href="/signIn">
+                  <a className="fw-bold">Sign.in</a>
+                </Link>
               </div>
               <div className="d-block d-lg-none">
                 {["left"].map((anchor) => (

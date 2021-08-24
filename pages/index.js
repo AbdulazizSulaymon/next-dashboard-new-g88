@@ -126,7 +126,7 @@ export default function Home() {
             </div>
           </div>
           <div className="row my-4">
-            <div className="col-12 col-sm-12 col-xl-8 col-lg-12 col-md-12 m-0 mb-4">
+            <div className="col-12 col-sm-12 col-xl-8 col-lg-12 col-md-12 m-0">
               <div className="dashboardBox">
                 <div className="box_header pb-0">
                   <div className="row">

@@ -29,7 +29,6 @@ const GlobalStyles = createGlobalStyle`
     .rounded{
         border-radius: 8px !important;
     }
-<<<<<<< HEAD
     .sidebar_res{
         margin: 100px 50px;
     }
@@ -52,30 +51,5 @@ const GlobalStyles = createGlobalStyle`
         }}}
     }
 `;
-=======
-
-    .MuiDrawer-paperAnchorTop{
-                width: 80% !important;
-                margin: auto !important;
-                border-radius: 20px 20px 0 0;
-                top: 40px !important;
-                display: none;
-
-                ::-webkit-scrollbar {
-                width: 2px;
-                height: 7px;
-                }
-                ::-webkit-scrollbar-track {
-                background: #f1f1f1;
-                }
-                ::-webkit-scrollbar-thumb {
-                background: #394061;
-                }
-                ::-webkit-scrollbar-thumb:hover {
-                background: #394090;
-                }
-    } 
-`
->>>>>>> c0ea642197c40d96a76d85290cc6e239b41b39d5
 
 export default GlobalStyles;
