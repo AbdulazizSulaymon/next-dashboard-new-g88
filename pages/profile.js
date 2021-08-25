@@ -81,9 +81,8 @@ const Profile = () => {
                     {AppData.map((v, i) => (
                       <li className="nav-item" key={v.title}>
                         <a
-                          className={`nav-link mb-0 px-0 py-1${
-                            router.pathname === v.active ? "active_link" : ""
-                          }`}
+                          className={`nav-link mb-0 px-0 py-1${router.pathname === v.active ? "active_link" : ""
+                            }`}
                           data-bs-toggle="tab"
                           aria-selected="false"
                           role="tab"
@@ -274,8 +273,8 @@ const Profile = () => {
                                 View Project
                               </button>
                               <div className="avatar-group mt-2">
-                                {v.imgs.map((v) => (
-                                  <a href="#" className="rounded-circle">
+                                {v.imgs.map((v, i) => (
+                                  <a key={i} href="#" className="rounded-circle">
                                     <img
                                       src={v.img}
                                       className={`avatars avatars-xs ${v.className}`}
@@ -289,15 +288,15 @@ const Profile = () => {
                         </div>
                       </div>
                     ))}
-                    <div class="col-xl-3 col-md-6 ">
-                      <div class="card h-100 card-plain border m-0">
-                        <div class="card-body d-flex flex-column justify-content-center text-center">
+                    <div className="col-xl-3 col-md-6 ">
+                      <div className="card h-100 card-plain border m-0">
+                        <div className="card-body d-flex flex-column justify-content-center text-center">
                           <a href="#">
                             <FontAwesomeIcon
                               icon={faPlus}
                               className="text-secondary"
                             />
-                            <h5 class=" text-secondary"> New project </h5>
+                            <h5 className=" text-secondary"> New project </h5>
                           </a>
                         </div>
                       </div>
