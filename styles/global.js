@@ -50,6 +50,9 @@ const GlobalStyles = createGlobalStyle`
           }
         }}}
     }
+    .toolip{
+
+    }
 `;
 
 export default GlobalStyles;

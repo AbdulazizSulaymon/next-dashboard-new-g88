@@ -37,6 +37,7 @@ const AccoundPages = [
   { icon: <GroupAddIcon />, title: "Profile", href: "/profile" },
   { icon: <LibraryBooksIcon />, title: "Sign in", href: "/signIn" },
   { icon: <FlareIcon />, title: "Sign up", href: "/signUp" },
+  { icon: <FlareIcon />, title: "Sign up", href: "/test" },
 ];
 
 const boxes = [
