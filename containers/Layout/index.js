@@ -70,7 +70,7 @@ const Layout = ({ children }) => {
               >
                 <Link href={v.href}>
                   <a className="item d-flex align-items-center">
-                    <div className="icon rounded shadow">{v.icon}</div>
+                    <div className="icon rounded shadow h-60 w-60">{v.icon}</div>
                     <p className="ms-3 mb-0"> {v.title}</p>
                   </a>
                 </Link>
@@ -130,7 +130,7 @@ const Layout = ({ children }) => {
             >
               <Link href={v.href}>
                 <a className="item d-flex align-items-center">
-                  <div className="icon rounded shadow">{v.icon}</div>
+                  <div className="icon rounded shadow h-60 w-60">{v.icon}</div>
                   <p className="ms-3 mb-0"> {v.title}</p>
                 </a>
               </Link>
@@ -148,7 +148,7 @@ const Layout = ({ children }) => {
             >
               <Link href={v.href}>
                 <a className="item d-flex align-items-center">
-                  <div className="icon rounded shadow">{v.icon}</div>
+                  <div className="icon rounded shadow h-60 w-60">{v.icon}</div>
                   <p className="ms-3 mb-0"> {v.title}</p>
                 </a>
               </Link>
@@ -158,20 +158,29 @@ const Layout = ({ children }) => {
         <div className="cardBox mt-5">
           <div className="full_back"></div>
           <div className="card_body">
-            <div className="rounded bg-white w-25 my-3 text-dark text-center ms-3">
+            <div className="rounded bg-white w-25 my-3 text-dark text-center ms-3 icons">
               <PersonIcon />
             </div>
             <div className="docs_info ms-4">
               <h6 className="texts">Need help?</h6>
               <p className="fw-bold texts">Please check our docs</p>
-              <Button className="my-2 rounded ms-2" variant="contained">
-                Documentation
-              </Button>
+              <a href="https://www.creative-tim.com/learning-lab/bootstrap/license/soft-ui-dashboard">
+                <button
+                  className="btn btn-light shadow w-100 my-2 rounded ms-2"
+                  variant="contained"
+                >
+                  Documentation
+                </button>
+              </a>
             </div>
           </div>
         </div>
         <div className="text-center my-3">
-          <Button className="btn-gradient text-white">Upgrade to pro</Button>
+          <a href="https://www.creative-tim.com/product/soft-ui-dashboard-pro?ref=sidebarfree">
+            <button className="btn btn-gradient text-white">
+              Upgrade to pro
+            </button>
+          </a>
         </div>
       </div>
       <div className="rightside ">

@@ -15,29 +15,23 @@ import CodeIcon from "@material-ui/icons/Code";
 import LocalGroceryStoreIcon from "@material-ui/icons/LocalGroceryStore";
 import NoteIcon from "@material-ui/icons/Note";
 import VpnKeyIcon from "@material-ui/icons/VpnKey";
+import { faCreditCard, faCube, faHotel, faRocket } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const dashboardPages = [
   {
-    icon: <HomeIcon />,
+    icon: <FontAwesomeIcon icon={faHotel} />,
     title: "Dashboard",
     href: "/",
     active: "active",
   },
   { icon: <ApartmentIcon />, title: "Tables", href: "/table" },
-  { icon: <AssessmentIcon />, title: "Billing", href: "/billing" },
-  {
-    icon: <DashboardIcon />,
-    title: "Virtual Reality",
-    href: "/virtualReality",
-  },
-  { icon: <BuildIcon />, title: "Rtl", href: "/rtl" },
+  { icon: <FontAwesomeIcon icon={faCreditCard} />, title: "Billing", href: "/billing" },
 ];
 
 const AccoundPages = [
   { icon: <GroupAddIcon />, title: "Profile", href: "/profile" },
-  { icon: <LibraryBooksIcon />, title: "Sign in", href: "/signIn" },
-  { icon: <FlareIcon />, title: "Sign up", href: "/signUp" },
-  { icon: <FlareIcon />, title: "Sign up", href: "/test" },
+  { icon: <FontAwesomeIcon icon={faRocket} />, title: "Sign up", href: "/signUp" },
 ];
 
 const boxes = [
