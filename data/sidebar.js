@@ -1,11 +1,6 @@
-import ApartmentIcon from "@material-ui/icons/Apartment";
-import AssessmentIcon from "@material-ui/icons/Assessment";
-import DashboardIcon from "@material-ui/icons/Dashboard";
-import GroupAddIcon from "@material-ui/icons/GroupAdd";
-import LibraryBooksIcon from "@material-ui/icons/LibraryBooks";
-import BuildIcon from "@material-ui/icons/Build";
-import FlareIcon from "@material-ui/icons/Flare";
 import HomeIcon from "@material-ui/icons/Home";
+import ApartmentIcon from "@material-ui/icons/Apartment";
+import GroupAddIcon from "@material-ui/icons/GroupAdd";
 import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
 import SportsSoccerIcon from "@material-ui/icons/SportsSoccer";
 import PhotoAlbumIcon from "@material-ui/icons/PhotoAlbum";
@@ -15,29 +10,42 @@ import CodeIcon from "@material-ui/icons/Code";
 import LocalGroceryStoreIcon from "@material-ui/icons/LocalGroceryStore";
 import NoteIcon from "@material-ui/icons/Note";
 import VpnKeyIcon from "@material-ui/icons/VpnKey";
+import {
+  faChartBar,
+  faCreditCard,
+  faCube,
+  faHotel,
+  faRocket,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const dashboardPages = [
   {
-    icon: <HomeIcon />,
+    icon: <FontAwesomeIcon icon={faHotel} />,
     title: "Dashboard",
     href: "/",
     active: "active",
   },
   { icon: <ApartmentIcon />, title: "Tables", href: "/table" },
-  { icon: <AssessmentIcon />, title: "Billing", href: "/billing" },
   {
-    icon: <DashboardIcon />,
-    title: "Virtual Reality",
-    href: "/virtualReality",
+    icon: <FontAwesomeIcon icon={faCreditCard} />,
+    title: "Billing",
+    href: "/billing",
   },
-  { icon: <BuildIcon />, title: "Rtl", href: "/rtl" },
 ];
 
 const AccoundPages = [
   { icon: <GroupAddIcon />, title: "Profile", href: "/profile" },
-  { icon: <LibraryBooksIcon />, title: "Sign in", href: "/signIn" },
-  { icon: <FlareIcon />, title: "Sign up", href: "/signUp" },
-  { icon: <FlareIcon />, title: "Sign up", href: "/test" },
+  {
+    icon: <FontAwesomeIcon icon={faChartBar} />,
+    title: "Charts",
+    href: "/charts",
+  },
+  {
+    icon: <FontAwesomeIcon icon={faRocket} />,
+    title: "Sign up",
+    href: "/signUp",
+  },
 ];
 
 const boxes = [

@@ -4,7 +4,9 @@ const padding = "20px";
 const LayoutWrapper = styled.div`
   display: flex;
   min-height: 100vh;
-
+  .icons {
+    color: #344767;
+  }
   .sidebar {
     width: 0;
     flex-shrink: 0;
@@ -72,6 +74,14 @@ const LayoutWrapper = styled.div`
         color: #fff;
         position: relative;
         z-index: 2;
+        .icons {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #344767 !important;
+          width: 40px;
+          height: 40px;
+        }
       }
     }
     .photo {
@@ -95,16 +105,17 @@ const LayoutWrapper = styled.div`
         }
         a {
           color: rgba(147, 154, 161);
+          .w-60, .h-60 {
+            width: 40px;
+            height: 40px;
+          }
           .icon {
             border-radius: 8px;
-            width: 32px;
-            height: 32px;
             display: flex;
             align-items: center;
             justify-content: center;
-            /* background-image: linear-gradient(310deg, #e9ecef, #e9ecef); */
             background-color: #fff;
-            color: #000 !important;
+            color: #344767;
           }
         }
       }
