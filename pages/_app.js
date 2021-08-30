@@ -6,7 +6,7 @@ import Head from "next/head";
 import { Provider } from "react-redux";
 import store from "../redux/store";
 import GlobalStyles from "../styles/global";
-import Router, { useRouter } from "next/router";
+import Router from "next/router";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
 
