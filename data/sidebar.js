@@ -1,3 +1,4 @@
+import HomeIcon from "@material-ui/icons/Home";
 import ApartmentIcon from "@material-ui/icons/Apartment";
 import GroupAddIcon from "@material-ui/icons/GroupAdd";
 import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
@@ -9,7 +10,13 @@ import CodeIcon from "@material-ui/icons/Code";
 import LocalGroceryStoreIcon from "@material-ui/icons/LocalGroceryStore";
 import NoteIcon from "@material-ui/icons/Note";
 import VpnKeyIcon from "@material-ui/icons/VpnKey";
-import { faChartBar, faCreditCard, faCube, faHotel, faRocket } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChartBar,
+  faCreditCard,
+  faCube,
+  faHotel,
+  faRocket,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const dashboardPages = [
@@ -20,13 +27,25 @@ const dashboardPages = [
     active: "active",
   },
   { icon: <ApartmentIcon />, title: "Tables", href: "/table" },
-  { icon: <FontAwesomeIcon icon={faCreditCard} />, title: "Billing", href: "/billing" },
+  {
+    icon: <FontAwesomeIcon icon={faCreditCard} />,
+    title: "Billing",
+    href: "/billing",
+  },
 ];
 
 const AccoundPages = [
   { icon: <GroupAddIcon />, title: "Profile", href: "/profile" },
-  { icon: <FontAwesomeIcon icon={faChartBar} />, title: "Charts", href: "/charts" },
-  { icon: <FontAwesomeIcon icon={faRocket} />, title: "Sign up", href: "/signUp" },
+  {
+    icon: <FontAwesomeIcon icon={faChartBar} />,
+    title: "Charts",
+    href: "/charts",
+  },
+  {
+    icon: <FontAwesomeIcon icon={faRocket} />,
+    title: "Sign up",
+    href: "/signUp",
+  },
 ];
 
 const boxes = [
