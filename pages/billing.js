@@ -20,6 +20,7 @@ import exclamation from "../images/exlam.svg";
 import imgMaster from "../images/mastercard.svg";
 import visamaster from "../images/mastercard.svg";
 import visadef from "../images/visa-logo.svg";
+import Layout from "../containers/Layout";
 const Billing = () => {
   const dataHead = [
     { date: "March,01,2020", id: "#MS-415646", price: "$180" },
@@ -76,6 +77,7 @@ const Billing = () => {
     },
   ];
   return (
+    <Layout>
     <div>
       <div className={classes.headPanel}>
         <div className={classes.headLeft}>
@@ -245,6 +247,7 @@ const Billing = () => {
         </div>
       </div>
     </div>
+    </Layout>
   );
 };
 
