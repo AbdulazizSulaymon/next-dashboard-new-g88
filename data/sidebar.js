@@ -45,7 +45,11 @@ const AccoundPages = [
     title: "Sign up",
     href: "/signUp",
   },
-  { icon: <FontAwesomeIcon icon={faClone} />, title: "Sign in", href: "/signIn" },
+  {
+    icon: <FontAwesomeIcon icon={faClone} />,
+    title: "Sign in",
+    href: "/signIn",
+  },
 ];
 
 const boxes = [
