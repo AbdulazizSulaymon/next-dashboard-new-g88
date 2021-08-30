@@ -1,4 +1,3 @@
-import HomeIcon from "@material-ui/icons/Home";
 import ApartmentIcon from "@material-ui/icons/Apartment";
 import GroupAddIcon from "@material-ui/icons/GroupAdd";
 import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
@@ -12,8 +11,8 @@ import NoteIcon from "@material-ui/icons/Note";
 import VpnKeyIcon from "@material-ui/icons/VpnKey";
 import {
   faChartBar,
+  faClone,
   faCreditCard,
-  faCube,
   faHotel,
   faRocket,
 } from "@fortawesome/free-solid-svg-icons";
@@ -46,6 +45,7 @@ const AccoundPages = [
     title: "Sign up",
     href: "/signUp",
   },
+  { icon: <FontAwesomeIcon icon={faClone} />, title: "Sign in", href: "/signIn" },
 ];
 
 const boxes = [
