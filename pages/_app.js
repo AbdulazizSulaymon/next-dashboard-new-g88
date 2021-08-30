@@ -6,6 +6,14 @@ import Head from "next/head";
 import { Provider } from "react-redux";
 import store from "../redux/store";
 import GlobalStyles from "../styles/global";
+import Router, { useRouter } from "next/router";
+import NProgress from "nprogress";
+import "nprogress/nprogress.css";
+
+//Binding events.
+Router.events.on("routeChangeStart", () => NProgress.start());
+Router.events.on("routeChangeComplete", () => NProgress.done());
+Router.events.on("routeChangeError", () => NProgress.done());
 
 function MyApp({ Component, pageProps }) {
   return (
