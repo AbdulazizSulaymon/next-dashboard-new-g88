@@ -25,8 +25,8 @@ const dashboardPages = [
 
 const AccoundPages = [
   { icon: <GroupAddIcon />, title: "Profile", href: "/profile" },
-  { icon: <FontAwesomeIcon icon={faRocket} />, title: "Sign up", href: "/signUp" },
   { icon: <FontAwesomeIcon icon={faChartBar} />, title: "Charts", href: "/charts" },
+  { icon: <FontAwesomeIcon icon={faRocket} />, title: "Sign up", href: "/signUp" },
 ];
 
 const boxes = [
