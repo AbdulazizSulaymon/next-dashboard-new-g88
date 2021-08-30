@@ -1,5 +1,4 @@
 import ApartmentIcon from "@material-ui/icons/Apartment";
-import GroupAddIcon from "@material-ui/icons/GroupAdd";
 import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
 import SportsSoccerIcon from "@material-ui/icons/SportsSoccer";
 import PhotoAlbumIcon from "@material-ui/icons/PhotoAlbum";
@@ -15,6 +14,7 @@ import {
   faCreditCard,
   faHotel,
   faRocket,
+  faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -34,7 +34,7 @@ const dashboardPages = [
 ];
 
 const AccoundPages = [
-  { icon: <GroupAddIcon />, title: "Profile", href: "/profile" },
+  { icon: <FontAwesomeIcon icon={faUser} />, title: "Profile", href: "/profile" },
   {
     icon: <FontAwesomeIcon icon={faChartBar} />,
     title: "Charts",
