@@ -12,6 +12,7 @@ import React from "react";
 import SignInWrapper from "../Wrappers/SignInWrapper";
 import Drawer from "@material-ui/core/Drawer";
 import List from "@material-ui/core/List";
+import Switch from "@material-ui/core/Switch";
 
 const SignIn = () => {
   const [state, setState] = React.useState({
@@ -31,16 +32,12 @@ const SignIn = () => {
   const list = () => (
     <List>
       <div className=" d-flex justify-content-between align-items-center p-2 rounded-pill shadow nav">
-        <p className="fw-bold p-0 m-0">Soft UI Dashboard</p>
-        <ul className="d-flex py-2 px-5">
+        <ul className="d-flex py-2 px-5 ">
           <li className="mx-2">Dashboard</li>
           <li className="mx-2">Profile</li>
           <li className="mx-2">Sign Up</li>
           <li className="mx-2">Sign In</li>
         </ul>
-        <Button variant="contained" className="rounded-pill px-5">
-          FREE DOWNLOAD
-        </Button>
       </div>
     </List>
   );
@@ -50,14 +47,36 @@ const SignIn = () => {
       <div className="bac"></div>
       <div className="container p-2">
         <div className="d-none d-lg-flex d-flex justify-content-between align-items-center p-2 rounded-pill shadow nav">
-          <p className="fw-bold p-0 m-0">Soft UI Dashboard</p>
+          <p className="fw-bold p-0 m-0">
+            <Link href="/">
+              <a>Soft UI Dashboard</a>
+            </Link>
+          </p>
           <ul className="d-flex py-2 px-5">
-            <li className="mx-2">Dashboard</li>
-            <li className="mx-2">Profile</li>
-            <li className="mx-2">Sign Up</li>
-            <li className="mx-2">Sign In</li>
+            <li className="mx-2">
+              <Link href="/">
+                <a>Dashboard</a>
+              </Link>
+            </li>
+            <li className="mx-2">
+              <Link href="profile">
+                <a>Profile</a>
+              </Link>
+            </li>
+            <li className="mx-2">
+              {" "}
+              <Link href="signUp">
+                <a>Sign Up</a>
+              </Link>
+            </li>
+            <li className="mx-2">
+              {" "}
+              <Link href="signIn">
+                <a>Sign In</a>
+              </Link>
+            </li>
           </ul>
-          <Button variant="contained" className="rounded-pill px-5">
+          <Button variant="contained" className="rounded-pill px-5 but1">
             FREE DOWNLOAD
           </Button>
         </div>
@@ -79,8 +98,51 @@ const SignIn = () => {
         </div>
 
         <div className="clas">
-          <h3>Welcome back</h3>
-          <p>Enter your email and password to sign in</p>
+          <div className="px-1">
+            <h3>Welcome back</h3>
+            <p>Enter your email and password to sign in</p>
+          </div>
+          <div className="container small-container ">
+            <div className="row text-dark ">
+              <div className="col-md-7 col-lg-5 col-xl-4 mt-3 p-0">
+                <div className="rounded ">
+                  <div className="d-flex flex-column">
+                    <label className="fw-bolder ms-1">
+                      <small>Email</small>
+                    </label>
+                    <input
+                      type="email"
+                      placeholder="E-mail"
+                      className="mt-1 p-2 rounded border"
+                    />
+                  </div>
+                  <div className="d-flex flex-column mt-3">
+                    <label className="fw-bolder ms-1">
+                      <small>Password</small>
+                    </label>
+                    <input
+                      type="password"
+                      placeholder="Password"
+                      className="mt-1 p-2 rounded border"
+                    />
+                  </div>
+
+                  <div className="d-flex align-items-center my-3 mx-0">
+                    <Switch
+                      color="primary"
+                      inputProps={{ "aria-label": "primary checkbox" }}
+                    />
+                    <p className="mb-0 ms-2 fw-bold text-dark">Remember me </p>
+                  </div>
+                  <div className="text-center">
+                    <Button className="mt-1 rounded text-white text-center bsign w-100">
+                      SIGN IN
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="py-5">
           <ul className="d-flex justify-content-center mt-5">

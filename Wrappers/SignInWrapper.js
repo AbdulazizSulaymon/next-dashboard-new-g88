@@ -37,13 +37,13 @@ const SignInWrapper = styled.div`
   p {
     color: grey;
   }
-  Button {
+  .but1 {
     background: linear-gradient(135deg, #3a416f 0%, #141727 100%);
     color: white;
   }
 
   a {
-    color: white;
+    color: gray;
     &:hover {
       color: rgba(158, 158, 158, 1);
     }
@@ -58,6 +58,15 @@ const SignInWrapper = styled.div`
     width: 80%;
     top: 10px;
     z-index: 1000;
+  }
+  .bsign,
+  .bsign:hover,
+  .bsign:focus {
+    background-color: rgba(0, 192, 233, 1);
+  }
+  input {
+    border: 1px solid gray;
+    outline: none;
   }
 `;
 
