@@ -53,6 +53,24 @@ const GlobalStyles = createGlobalStyle`
     .toolip{
 
     }
+
+    #nprogress{
+        height: 100vh !important;
+        .spinner{
+            top:0;
+            right: 0;
+            width: 100% !important;
+            height: 100vh !important;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background-color: #33333333;
+            .spinner-icon{
+            width: 60px !important;
+            height: 60px !important;
+            }
+        }
+    }
 `;
 
 export default GlobalStyles;
