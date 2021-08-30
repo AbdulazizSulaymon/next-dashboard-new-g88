@@ -16,6 +16,7 @@ import {
   faCube,
   faHotel,
   faRocket,
+  faSignInAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -45,6 +46,11 @@ const AccoundPages = [
     icon: <FontAwesomeIcon icon={faRocket} />,
     title: "Sign up",
     href: "/signUp",
+  },
+  {
+    icon: <FontAwesomeIcon icon={faSignInAlt} />,
+    title: "Sign in",
+    href: "/signIn",
   },
 ];
 
