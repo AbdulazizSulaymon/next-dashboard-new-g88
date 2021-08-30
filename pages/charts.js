@@ -1,6 +1,7 @@
 import React from "react";
 import { Bar } from "react-chartjs-2";
 import Layout from "../containers/Layout";
+import { Line } from 'react-chartjs-2';
 
 const data = {
   labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
@@ -74,12 +75,57 @@ const options2 = {
   },
 };
 
+const data3 = {
+  labels: ['1', '2', '3', '4', '5', '6'],
+  datasets: [
+    {
+      label: '# of Votes',
+      data: [12, 19, 3, 5, 2, 3],
+      fill: false,
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgba(255, 99, 132, 0.2)',
+      yAxisID: 'y-axis-1',
+    },
+    {
+      label: '# of No Votes',
+      data: [1, 2, 1, 1, 2, 2],
+      fill: false,
+      backgroundColor: 'rgb(54, 162, 235)',
+      borderColor: 'rgba(54, 162, 235, 0.2)',
+      yAxisID: 'y-axis-2',
+    },
+  ],
+};
+
+const options3 = {
+  scales: {
+    yAxes: [
+      {
+        type: 'linear',
+        display: true,
+        position: 'left',
+        id: 'y-axis-1',
+      },
+      {
+        type: 'linear',
+        display: true,
+        position: 'right',
+        id: 'y-axis-2',
+        gridLines: {
+          drawOnArea: false,
+        },
+      },
+    ],
+  },
+};
+
 const Charts = () => {
   return (
     <Layout>
       <h1>Bar</h1>
       <Bar data={data2} options={options2} />
       <Bar data={data} options={options} />
+      <Line data={data3} options={options3} />
     </Layout>
   );
 };
